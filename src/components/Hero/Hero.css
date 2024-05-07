@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFDED;
+}
+
+
+.hero-section {
+    width: 100%;
+    margin-top: 10rem;
+    /* display: flex; */
+}
+
+.left-section {
+    width: 50%;
+}
+
+.left-section > button {
+    width: 257px;
+    height: 100px;
+    border-radius: 16px;
+    background-color: rgba(204, 85, 18, 1);
+    border: none;
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    font-family: 'Comic Sans MS';
+}
+
+.header-text {
+    width: 600px;
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Comic Sans MS';
+}
+
+span {
+    color: #666666;
+}
+
+/* -------------right section-------------- */
+
+.left-img {
+    position: relative;
+    width: 450px;
+}
+
+.right-img {
+    position: absolute;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    width: 400px;
+}
+
