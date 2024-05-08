@@ -1,22 +1,22 @@
-import './Navbar.css'
+import styles from './Navbar.module.css'
 import kidera from '../../assets/Kidera.png'
 
 export default function Navbar() {
   return (
-    <header>
-        <nav>
-            <div className='left-section'>
+    <header className={styles.header}>
+        <nav className={styles.nav}>
+            <div className={styles['left-section']}>
                 <img src={kidera} alt="" />
             </div>
-            <div className="right-section">
-                <ul>
-                    <li>Home</li>
-                    <li>Dashboard</li>
-                    <li>About</li>
-                    <li>Courses</li>
+            <div className={styles['right-section']}>
+                <ul className={styles['nav-list']}>
+                    <li className={styles['nav-list-item']}>Home</li>
+                    <li className={styles['nav-list-item']}>Dashboard</li>
+                    <li className={styles['nav-list-item']}>About</li>
+                    <li className={styles['nav-list-item']}>Courses</li>
                 </ul>
 
-                <button className="nav-button">Login</button>
+                <button className={styles['nav-button']}>Login</button>
             </div>
         </nav>
     </header>
