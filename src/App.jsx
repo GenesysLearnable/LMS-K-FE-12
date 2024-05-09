@@ -1,8 +1,10 @@
+import SignUp from "./components/signup/Signup";
+
 const App = () => {
   return (
     <>
       <div>
-        <h1>Hello Kidera</h1>
+        <SignUp />
       </div>
     </>
   );
