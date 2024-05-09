@@ -6,30 +6,19 @@ body {
 
 
 .hero-section {
+    box-sizing: border-box;
     width: 100%;
-    margin-top: 6rem;
-    padding-bottom: 4rem;
+    height: 110vh;
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .left-section {
-    width: 48%;
-    padding: 10px;
-    margin-top: 5rem;
-}
-
-.herobtn {
-    width: 257px;
-    height: 100px;
-    border-radius: 16px;
-    background-color: rgba(204, 85, 18, 1);
-    border: none;
-    font-size: 28px;
-    font-weight: 400;
-    color: white;
-    font-family: 'Comic Sans MS';
+    width: 45%;
+    height: 550px;
 }
 
 .header-text {
@@ -41,8 +30,10 @@ body {
 }
 
 .body-text {
+    width: 480px;
     font-size: 28px;
     font-weight: normal;
+    margin-bottom: 60px;
 }
 
 span {
@@ -52,17 +43,12 @@ span {
 /* -------------right section-------------- */
 
 .right-section {
-    width: 48%;
+    width: 45%;
+    height: 550px;
 }
 
-.left-img {
-    width: 500px;
+.image {
+    width: 700px;
 }
 
-.right-img {
-    margin-left: -460px;
-    margin-top: 15px;
-    width: 600px;
-    height: 650px;
-}
 
