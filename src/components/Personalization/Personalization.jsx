@@ -4,6 +4,7 @@ import rubiks from '../../assets/rubiks.png'
 import kanbanBoard from '../../assets/kanban.png'
 import checklist from '../../assets/checklist.png'
 import openbook from '../../assets/lampoverbook.png'
+// import { Link } from 'react-router-dom'
 
 export default function Personalization() {
   return (
