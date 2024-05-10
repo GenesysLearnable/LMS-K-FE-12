@@ -1,5 +1,6 @@
 import styles from './Navbar.module.css'
 import kidera from '../../assets/Kidera.png'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -16,7 +17,9 @@ export default function Navbar() {
                     <li className={styles['nav-list-item']}>Courses</li>
                 </ul>
 
+                <Link to="/SignUp">
                 <button className={styles['nav-button']}>Login</button>
+                </Link>
             </div>
         </nav>
     </header>
