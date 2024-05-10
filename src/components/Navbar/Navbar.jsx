@@ -16,10 +16,9 @@ export default function Navbar() {
                     <li className={styles['nav-list-item']}>About</li>
                     <li className={styles['nav-list-item']}>Courses</li>
                 </ul>
-
-                <Link to="/SignUp">
+                <Link to= "/siginIn">
                 <button className={styles['nav-button']}>Login</button>
-                </Link>
+                </Link> 
             </div>
         </nav>
     </header>
