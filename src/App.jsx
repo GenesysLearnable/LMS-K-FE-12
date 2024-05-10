@@ -1,12 +1,13 @@
-import SignUp from "./components/signup/Signup";
+import { Routes, Route } from "react-router";
+import Home from "./pages/Home";
+import SignUp from "./pages/signup/Signup";
 
 const App = () => {
   return (
-    <>
-      <div>
-        <SignUp />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/signup" element={<SignUp />} />
+    </Routes>
   );
 };
 

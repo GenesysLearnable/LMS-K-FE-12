@@ -1,0 +1,15 @@
+.herobtn {
+    width: 287px;
+    height: 90px;
+    border-radius: 16px;
+    background-color: rgba(204, 85, 18, 1);
+    border: none;
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    font-family: 'Comic Sans MS';
+}
+
+.herobtn:hover {
+    cursor: pointer;
+}
