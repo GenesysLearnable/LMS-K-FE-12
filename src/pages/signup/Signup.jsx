@@ -1,22 +1,22 @@
-import FormBg from "../../assets/SignupBg.png";
+// import FormBg from "../../assets/SignupBg.png";
 import GoogleIcon from "../../assets/google.svg";
 import FacebookIcon from "../../assets/facebook.svg";
 import Logo from "../../assets/Kidera.svg";
 import ArrowLeft from "../../assets/arrow-left.svg";
-import "./Signup.css";
+import styles from "./Signup.module.css";
 
 const SignUp = () => {
   return (
     <>
-      <section className="signup">
-        <div className="left">
-          <img className="arrow-left" src={ArrowLeft} alt="left arrow" />
-          <div className="logo-container">
-            <img className="logo" src={Logo} alt="kidera logo" />
+      <section className={styles.signup}>
+        <div className={styles['left']}>
+          <img className={styles['arrow-left']} src={ArrowLeft} alt="left arrow" />
+          <div className={styles['logo-container']}>
+            <img className={styles['logo']} src={Logo} alt="kidera logo" />
           </div>
         </div>
-        <div className="right">
-          <div className="signup--form-title">
+        <div className={styles['right']}>
+          <div className={styles['signup--form-title']}>
             <h3>Sign Up</h3>
             <div>
               <p>Unlock exciting adventures!</p>
@@ -24,7 +24,7 @@ const SignUp = () => {
             </div>
           </div>
 
-          <div className="form--container">
+          <div className={styles['form--container']}>
             <form action="">
               <FormInput
                 for="email"
@@ -57,25 +57,25 @@ const SignUp = () => {
             </form>
 
             <div>
-              <div className="terms--container">
+              <div className={styles['terms--container']}>
                 <input type="checkbox" name="" id="" />
-                <p className="terms">
+                <p className={styles['terms']}>
                   By signing up you agree with our{" "}
-                  <span className="terms-text">terms and conditions</span>
+                  <span className={styles['terms-text']}>terms and conditions</span>
                 </p>
               </div>
-              <div className="form-footer">
+              <div className={styles['form-footer']}>
                 <h3 style={{ color: "#6C6B6B" }}>
                   Already have an account?{" "}
-                  <span className="signin-text">Sign in</span>
+                  <span className={styles['signin-text']}>Sign in</span>
                 </h3>
-                <p className="alt-signup">Or sign up with</p>
-                <div className="social-signin">
-                  <div className="google">
+                <p className={styles['alt-signup']}>Or sign up with</p>
+                <div className={styles['social-signin']}>
+                  <div className={styles['google']}>
                     <img src={GoogleIcon} alt="google icon" />
                     <p>Google</p>
                   </div>
-                  <div className="facebook">
+                  <div className={styles['facebook']}>
                     <img src={FacebookIcon} alt="google icon" />
                     <p>Facebook</p>
                   </div>
@@ -92,7 +92,7 @@ const SignUp = () => {
 const FormInput = (props) => {
   return (
     <>
-      <div className="signup--form-input">
+      <div className={styles['signup--form-input']}>
         <label htmlFor={props.for}>{props.title}</label>
         <input
           type={props.type}
@@ -108,8 +108,8 @@ const FormInput = (props) => {
 const FormButton = (props) => {
   return (
     <>
-      <div className="signup-btn--container">
-        <button className="signup-btn">{props.text}</button>
+      <div className={styles['signup-btn--container']}>
+        <button className={styles['signup-btn']}>{props.text}</button>
       </div>
     </>
   );
