@@ -1,10 +1,11 @@
+import { Route, Routes } from "react-router-dom";
+
 const App = () => {
   return (
-    <>
-      <div>
-        <h1>Hello Kidera</h1>
-      </div>
-    </>
+    <Routes>
+      {/* Add your routes like this */}
+      {/* <Route path="/" element={<Home />} /> */}
+    </Routes>
   );
 };
 
