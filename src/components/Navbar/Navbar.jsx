@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <header className={styles.header}>
+    <header className={styles['header']}>
         <nav className={styles.nav}>
             <div className={styles['left-section']}>
                 <img src={kidera} alt="" />
