@@ -1,4 +1,4 @@
-import FormBg from "../../assets/signupBg.png";
+import FormBg from "../../assets/SignupBg.png";
 import GoogleIcon from "../../assets/google.svg";
 import FacebookIcon from "../../assets/facebook.svg";
 import Logo from "../../assets/Kidera.svg";

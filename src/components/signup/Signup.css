@@ -5,7 +5,7 @@
 }
 
 .signup .left {
-  background-image: url("../../assets/signupBg.png");
+  background-image: url("../../assets/SignupBg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,41 +43,41 @@
 }
 
 .form--container {
-  width: 80%;
-  margin: 3.25rem auto 0 auto;
+  width: 85%;
+  margin: 2.25rem auto 0 auto;
 }
 
 .signup--form-input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .signup--form-input label {
-  margin-bottom: 1.75rem;
-  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .signup--form-input input {
-  padding: 1rem 0.8rem;
+  padding: 0.8rem 0.8rem;
   border-radius: 0.625rem;
   border: 1px solid #7d7a7a;
   outline: none;
 }
 
 .signup--form-input input::placeholder {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .signup--form-title h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #7939cc;
   font-family: "Comic Sans Bold";
   margin-bottom: 0.5rem;
 }
 
 .signup--form-title p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #505050;
 }
 
@@ -91,10 +91,10 @@
   border-radius: 0.625rem;
   border: 1px solid #f4af88;
   background: #f4af88;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-family: "Comic Sans Bold";
   color: white;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   margin-top: 1rem;
   cursor: pointer;
 }
@@ -118,6 +118,10 @@
 .signin-text {
   color: #8840e6;
   cursor: pointer;
+}
+
+.form-footer {
+  margin-bottom: 2rem;
 }
 
 .form-footer h3 {
@@ -161,5 +165,3 @@
 .facebook p {
   font-family: Actor;
 }
-
-/* Media Query for Laptop Screns */
