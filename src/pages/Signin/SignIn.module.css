@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter&display=swap');
+
+  
+  
+  *{
+    font-family: "Comic Neue", 
+    
+    
+  }
+  
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    height: 640px;
+    width: 500px;
+    background-color: #FFE9DC;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.top-img{
+    width: 40px;
+    margin:30px 0 0 40px;
+}
+
+.img1{
+    margin-top: 7rem;
+    width: 350px;
+}
+
+.img2{
+    width: 400px;
+    background-color: red;
+}
+
+.left{
+    
+    height: 640px;
+    text-align: center;
+    width: 500px;
+    padding: 0 30px 0 30px ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* background-color: rgb(232, 228, 223); */
+}
+
+
+
+.top-text{
+    margin-top: 2rem;
+    font-size: 36px;
+    font-weight: 700;
+color: #7939CC;
+font-family: "Comic Neue";
+}
+
+.second-text{
+    font-size: 30px;
+    font-weight: 400;
+    color: #404040;
+    width: 400px;
+    font-family: "Comic Neue";
+    margin-bottom: 3rem;
+}
+
+.Check-container{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-sideA{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-sideB{
+    color: #7939CC;
+    font-weight: 400;
+}
+
+
+
+.checkbox-sideA input[type="checkbox"] {
+    margin-right: 10px;    
+  }
+
+  
+  .downSign{
+    color: #7939CC;
+
+  }
+  
+ 
+  
+  .checkbox-sideA input[type="checkbox"] {
+    border: none; 
+    background-color: red;
+}
+
+
+
+
+
+
+.left > Button{
+    margin-top: 1rem;
+    width:500px;
+    height: 42px;
+    background-color: #CC5512;
+    font-family: "Comic Neue";
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.left > form{
+    display: flex;
+    flex-direction: column;
+} 
+
+form > label{
+    display: flex;
+    justify-self: start;
+    margin: 20px 0 20px 0;
+    font-family:"Comic Neue" ;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+form > input{
+    height: 46px;
+    border: 1px solid #7D7A7A ;
+    border-radius: 6px;
+}
+
+
+.last-text{
+    margin-top: 1rem;
+    font-family: "Comic Neue";
+    font-weight:500;
+    font-size: 20px;
+
+}
