@@ -1,22 +1,6 @@
 /* General Styling */
 @import url("https://fonts.googleapis.com/css2?family=Actor&display=swap");
 
-@font-face {
-  font-family: "Comic Sans";
-  src: url(./assets/fonts/COMICSANS.TTF);
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Comic Sans Bold";
-  src: url(./assets/fonts/COMICSANSBOLD.TTF);
-  font-weight: normal;
-}
-
 * {
-  font-family: "Comic Sans";
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+  font-family: "Comic Sans MS";
 }
