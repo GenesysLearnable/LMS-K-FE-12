@@ -1,9 +1,10 @@
 import styles from './Navbar.module.css'
 import kidera from '../../assets/Kidera.png'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <header className={styles.header}>
+    <header className={styles['header']}>
         <nav className={styles.nav}>
             <div className={styles['left-section']}>
                 <img src={kidera} alt="" />
@@ -15,8 +16,9 @@ export default function Navbar() {
                     <li className={styles['nav-list-item']}>About</li>
                     <li className={styles['nav-list-item']}>Courses</li>
                 </ul>
-
+                <Link to= "/signUp">
                 <button className={styles['nav-button']}>Login</button>
+                </Link> 
             </div>
         </nav>
     </header>
