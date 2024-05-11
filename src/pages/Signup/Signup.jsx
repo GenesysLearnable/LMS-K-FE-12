@@ -4,13 +4,16 @@ import FacebookIcon from "../../assets/facebook.svg";
 import Logo from "../../assets/Kidera.svg";
 import ArrowLeft from "../../assets/arrow-left.svg";
 import "./Signup.css";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <>
       <section className="signup">
         <div className="left">
-          <img className="arrow-left" src={ArrowLeft} alt="left arrow" />
+          <Link to="/">
+            <img className="arrow-left" src={ArrowLeft} alt="left arrow" />
+          </Link>
           <div className="logo-container">
             <img className="logo" src={Logo} alt="kidera logo" />
           </div>
@@ -57,17 +60,18 @@ const SignUp = () => {
             </form>
 
             <div>
-              <div className="terms--container">
-                <input type="checkbox" name="" id="" />
-                <p className="terms">
-                  By signing up you agree with our{" "}
-                  <span className="terms-text">terms and conditions</span>
-                </p>
+              <div className="signup--extras">
+                <div className="terms--container">
+                  <input type="checkbox" name="" id="" />
+                  <p className="terms">Remember Me</p>
+                </div>
               </div>
               <div className="form-footer">
                 <h3 style={{ color: "#6C6B6B" }}>
                   Already have an account?{" "}
-                  <span className="signin-text">Sign in</span>
+                  <Link to="/signin">
+                    <span className="signin-text">Sign in</span>
+                  </Link>
                 </h3>
                 <p className="alt-signup">Or sign up with</p>
                 <div className="social-signin">
@@ -115,4 +119,4 @@ const FormButton = (props) => {
   );
 };
 
-export default SignUp;
+export { SignUp, FormInput, FormButton };

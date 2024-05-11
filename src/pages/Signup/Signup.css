@@ -99,11 +99,17 @@
   cursor: pointer;
 }
 
+.signup--extras {
+  display: flex;
+  align-items: center;
+  margin-top: 0.7rem;
+  justify-content: space-between;
+}
+
 .terms--container {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  margin-top: 0.7rem;
 }
 
 .terms {

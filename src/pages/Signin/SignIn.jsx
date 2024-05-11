@@ -1,50 +1,82 @@
-import React from 'react'
-import imageSrc from "./image/portrait.png"
-import imageSrc2 from "./image/arrow.png"
-import styles from"../Signin/SignIn.module.css"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import FormBg from "../../assets/SignupBg.png";
+import GoogleIcon from "../../assets/google.svg";
+import FacebookIcon from "../../assets/facebook.svg";
+import Logo from "../../assets/Kidera.svg";
+import ArrowLeft from "../../assets/arrow-left.svg";
+import "../Signin/Signin.css";
+import "../Signup/Signup.css";
+import { FormInput } from "../Signup/Signup";
+import { FormButton } from "../Signup/Signup";
+import SigninBg from "../../assets/SigninBg.png";
 
 const SignIn = () => {
   return (
-    <div className={styles['container']}>
-    <div className={styles['right']}>
-      <Link to='/'>
-      <img className={styles['top-img']} src={imageSrc2}></img>
-      </Link>
-      <img className={styles['img1']} src={imageSrc}></img>
-    </div>
-
-    <div className={styles['left']}>
-      <h1 className={styles['top-text']}>Sign in</h1>
-      <div className={styles['second-text']}>Unlock exciting adventures! Sign up today</div>
-      <form>
-        <label  htmlFor=""  >Email Address</label>
-        <input></input>
-        <label htmlFor=''>Password</label>
-        <input></input>
-      </form>
-
-      <div className={styles['Check-container']}>
-        <div className={styles['checkbox-sideA']}>
-          <input type="checkbox" className={styles['myCheckbox']} ></input>
-        <p>Remember me</p>
+    <>
+      <section className="signin">
+        <div className="left">
+          <img className="signin-bg" src={SigninBg} alt="" />
+          <Link to="/signup">
+            <img className="arrow-left" src={ArrowLeft} alt="left arrow" />
+          </Link>
+          <div className="logo-container">
+            {/* <img className="logo" src={Logo} alt="kidera logo" /> */}
+          </div>
         </div>
+        <div className="right">
+          <div className="signup--form-title">
+            <h3>Sign In</h3>
+            <div>
+              <p>Unlock exciting adventures!</p>
+              <p>Sign in today</p>
+            </div>
+          </div>
 
-        <div className={styles['checkbox-sideB']}>
-          Forgot Password?
+          <div className="form--container">
+            <form action="">
+              <FormInput
+                for="email"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@gmail.com"
+                title="Email Address"
+              />
+
+              <FormInput
+                for="password"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="***********"
+                title="Password"
+              />
+
+              <FormButton text="Sign In" />
+            </form>
+
+            <div>
+              <div className="signup--extras">
+                <div className="terms--container">
+                  <input type="checkbox" name="" id="" />
+                  <p className="terms">Remember Me</p>
+                </div>
+                <p className="forgot-pass">Forgot Password?</p>
+              </div>
+              <div className="form-footer">
+                <h3 style={{ color: "#6C6B6B" }}>
+                  Don't have an account?{" "}
+                  <Link to="/signup">
+                    <span className="signin-text">Sign up</span>
+                  </Link>
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      
+      </section>
+    </>
+  );
+};
 
-      <button>Sign in</button>
-      <div className={styles['last-text']}>Do not have an account? 
-      <Link to='/signup'>
-      <span className={styles['downSign']}>Sign up</span> 
-      </Link>
-      </div>
-    </div>
-</div>
-  )
-}
-
-export default SignIn
+export default SignIn;
