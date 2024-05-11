@@ -1,0 +1,173 @@
+.signup {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+.signup .left {
+  background-image: url("../../assets/SignupBg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  position: relative;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 2.813rem;
+  left: 6.25rem;
+  cursor: pointer;
+}
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.813rem;
+}
+
+.logo-container .logo {
+  cursor: pointer;
+}
+
+.right {
+  width: 50%;
+}
+
+.signup--form-title {
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+}
+
+.form--container {
+  width: 85%;
+  margin: 2.25rem auto 0 auto;
+}
+
+.signup--form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+
+.signup--form-input label {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.signup--form-input input {
+  padding: 0.8rem 0.8rem;
+  border-radius: 0.625rem;
+  border: 1px solid #7d7a7a;
+  outline: none;
+}
+
+.signup--form-input input::placeholder {
+  font-size: 1.1rem;
+}
+
+.signup--form-title h3 {
+  font-size: 2rem;
+  color: #7939cc;
+  font-family: "Comic Sans Bold";
+  margin-bottom: 0.5rem;
+}
+
+.signup--form-title p {
+  font-size: 1.5rem;
+  color: #505050;
+}
+
+.signup-btn--container {
+  display: flex;
+  width: 100%;
+}
+
+.signup-btn {
+  width: 100%;
+  border-radius: 0.625rem;
+  border: 1px solid #f4af88;
+  background: #f4af88;
+  font-size: 1.3rem;
+  font-family: "Comic Sans Bold";
+  color: white;
+  padding: 0.7rem 0;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.signup--extras {
+  display: flex;
+  align-items: center;
+  margin-top: 0.7rem;
+  justify-content: space-between;
+}
+
+.terms--container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.terms {
+  font-family: Actor;
+}
+
+.terms-text {
+  color: #8840e6;
+  cursor: pointer;
+}
+
+.signin-text {
+  color: #8840e6;
+  cursor: pointer;
+}
+
+.form-footer {
+  margin-bottom: 2rem;
+}
+
+.form-footer h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.alt-signup {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem 0;
+  font-family: Actor;
+}
+
+.social-signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.google,
+.facebook {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #aeacac;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  width: 7rem;
+  cursor: pointer;
+}
+
+.google img,
+.facebook img {
+  height: 1.2rem;
+}
+
+.google p,
+.facebook p {
+  font-family: Actor;
+}

@@ -1,0 +1,34 @@
+.signin {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+.signin .left {
+  width: 50%;
+  position: relative;
+}
+
+.signin .left {
+  background: #ffe9dc;
+}
+
+.signin .left .logo-container {
+  position: absolute;
+  top: 0;
+}
+
+.signin-bg {
+  height: 40rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.terms {
+  font-family: Actor;
+  font-size: 1.1rem;
+}
+
+.forgot-pass {
+  color: #7939cc;
+}
