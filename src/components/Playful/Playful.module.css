@@ -1,52 +1,58 @@
 .container {
-    background-color: rgba(249, 116, 42, 1);
-    width: 100%;
-    height: 480px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: rgba(249, 116, 42, 1);
+  width: 100%;
+  /* height: 480px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    width: 971px;
-    height: 450px;
+  /* width: 971px; */
+  width: 70%;
+  /* height: 450px; */
 }
 
 .top-text {
-    color: rgba(255, 233, 220, 1);
-    text-align: center;
-    font-size: 40px;
-    font-weight: 700;
+  color: rgba(255, 233, 220, 1);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 3rem 0;
 }
 
 .content > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 90px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  /* align-items: center; */
+  gap: 6rem;
+  /* min-height: 20rem; */
+  margin-bottom: 3rem;
 }
 
 .block {
-    width: 170px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    text-align: center;
-    color: rgba(255, 233, 220, 1);
+  /* width: 170px; */
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 15px; */
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 233, 220, 1);
 }
 
 .block > p {
-    font-size: 30px;
+  font-size: 30px;
+  margin-top: 2rem;
 }
 
 .circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
