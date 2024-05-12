@@ -44,12 +44,13 @@
   width: 80%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-gap: 6rem;
   margin-bottom: 4rem;
   margin-top: 3rem;
 }
 
 .block {
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
