@@ -19,6 +19,7 @@ body {
   width: 45%;
   height: 550px;
   margin-left: 2rem;
+  margin-top: 6rem;
 }
 
 .header-text {
@@ -33,7 +34,8 @@ body {
   width: 480px;
   font-size: 28px;
   font-weight: normal;
-  margin-bottom: 60px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 span {
