@@ -47,8 +47,7 @@ const SignIn = () => {
       if (response.status === 200 || response.status === 201) {
         toast.success("Signed in successfully!");
         setTimeout(() => {
-          // Change the URL to the sign-in page
-          window.location.href = "/daashboard";
+          window.location.href = "/dashboard";
         }, 5000);
       }
       console.log(response.status);
