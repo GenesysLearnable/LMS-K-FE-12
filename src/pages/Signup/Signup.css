@@ -70,8 +70,9 @@
 .signup--form-input input {
   padding: 0.8rem 0.8rem;
   border-radius: 0.625rem;
-  border: 1px solid #7d7a7a;
+  border: 1px solid #4db036;
   outline: none;
+  background: #fffded;
 }
 
 .signup--form-input input::placeholder {
