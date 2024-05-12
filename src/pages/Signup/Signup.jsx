@@ -21,7 +21,6 @@ const SignUp = () => {
   // const notify = () => toast("Account already exists");
 
   useEffect(() => {
-    // Check if any of the fields are empty
     const anyEmptyField = Object.values(userData).some((field) => field === "");
     setIsDisabled(anyEmptyField);
   }, [userData]);
@@ -145,9 +144,12 @@ const SignUp = () => {
 
             <div>
               <div className="signup--extras">
-                <div className="terms--container">
+                <div id="inputPreview" className="terms--container">
                   <input type="checkbox" name="" id="" />
-                  <p className="terms">Remember Me</p>
+                  <p className="terms">
+                    By signing up you agree with our{" "}
+                    <span className="terms-text">terms and conditions</span>
+                  </p>
                 </div>
               </div>
               <div className="form-footer">
