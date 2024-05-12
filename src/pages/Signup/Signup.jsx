@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import FormBg from "../../assets/SignupBg.png";
 import GoogleIcon from "../../assets/google.svg";
 import FacebookIcon from "../../assets/facebook.svg";
@@ -5,10 +6,85 @@ import Logo from "../../assets/Kidera.svg";
 import ArrowLeft from "../../assets/arrow-left.svg";
 import "./Signup.css";
 import { Link } from "react-router-dom";
+import axios from "../../api/axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
+  // const notify = () => toast("Account already exists");
+
+  useEffect(() => {
+    // Check if any of the fields are empty
+    const anyEmptyField = Object.values(userData).some((field) => field === "");
+    setIsDisabled(anyEmptyField);
+  }, [userData]);
+
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+
+    if (
+      userData.email !== "" &&
+      userData.password !== "" &&
+      userData.confirmPassword !== ""
+    ) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  };
+
+  const signUp = async (e) => {
+    e.preventDefault();
+    console.log(userData);
+    if (userData.password !== userData.confirmPassword) {
+      setErrorMessage("Passwords don't match!");
+      console.log("Password doesn't match");
+    } else {
+      setErrorMessage("");
+      try {
+        const response = await axios.post("/api/user/signup", userData, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (response.status === 200 || response.status === 201) {
+          toast.success("Account created successfully!");
+          setTimeout(() => {
+            // Change the URL to the sign-in page
+            window.location.href = "/signin";
+          }, 5000);
+        }
+        console.log(response.status);
+      } catch (error) {
+        if (error.response.status === 400) {
+          toast.error("Account already exists!");
+        }
+        console.log(error.response);
+      }
+    }
+  };
+
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        pauseOnHover={false}
+        theme="light"
+        transition:Slide
+      />
       <section className="signup">
         <div className="left">
           <Link to="/">
@@ -28,35 +104,43 @@ const SignUp = () => {
           </div>
 
           <div className="form--container">
-            <form action="">
+            <form onSubmit={signUp}>
               <FormInput
                 for="email"
                 type="email"
+                value={userData.email}
                 name="email"
                 id="email"
                 placeholder="example@gmail.com"
                 title="Email Address"
+                onChange={handleChange}
               />
 
               <FormInput
                 for="password"
                 type="password"
+                value={userData.password}
                 name="password"
                 id="password"
                 placeholder="***********"
                 title="Password"
+                onChange={handleChange}
+                error={errorMessage}
               />
 
               <FormInput
                 for="confirmPassword"
                 type="password"
+                value={userData.confirmPassword}
                 name="confirmPassword"
                 id="confirmPassword"
                 placeholder="***********"
                 title="Confirm Password"
+                onChange={handleChange}
+                error={errorMessage}
               />
 
-              <FormButton text="Sign Up" />
+              <FormButton text="Sign Up" disabled={isDisabled} />
             </form>
 
             <div>
@@ -103,7 +187,10 @@ const FormInput = (props) => {
           name={props.name}
           id={props.id}
           placeholder={props.placeholder}
+          onChange={props.onChange}
+          required
         />
+        <p className="signup-error">{props.error}</p>
       </div>
     </>
   );
@@ -113,7 +200,13 @@ const FormButton = (props) => {
   return (
     <>
       <div className="signup-btn--container">
-        <button className="signup-btn">{props.text}</button>
+        <button
+          disabled={props.disabled}
+          className={`signup-btn ${!props.disabled ? "active" : ""}`}
+          type="submit"
+        >
+          {props.text}
+        </button>
       </div>
     </>
   );
