@@ -1,20 +1,30 @@
+.title {
+    margin: 11rem 0 1rem 4rem;
+    color: rgba(113, 53, 191, 1);
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+/* -------------AboutNav---------------------- */
 .container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    font-style: "Comic Neue";
+    border: 1px solid blue;
 }
 
-.abt-header {
-    margin-top: 150px;
-    color: rgba(113, 53, 191, 1);
-    font-size: 40px;
-    font-weight: 700;
+.navlist {
+    width: 1030px;
+    list-style-type: none;
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    color: rgba(244, 175, 136, 1);
+    border: 1px solid red;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    margin-bottom: -2rem;
-    width: 100%;
+.navlistitem {
+    font-size: 32px;
+    font-weight: 100;
 }
-
-/* --------------------About Nav -------------------------- */
-
