@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import kidera from "../../assets/Kidera.svg";
 import Avatar from "../../assets/avatar.png";
 import Bell from "../../assets/bell.svg";
@@ -8,10 +8,18 @@ import { useGlobalContext } from "../../context/appContext";
 
 export default function Navbar() {
   const { activeNavItem, setActiveNavItem } = useGlobalContext();
+  const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
 
   const toggleActiveLink = (link) => {
     setActiveNavItem(link);
   };
+
+  useEffect(() => {
+    const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
+    if (storedIsLoggedIn) {
+      setIsLoggedIn(storedIsLoggedIn === "true"); // Convert the string to a boolean
+    }
+  }, []);
 
   return (
     <header className="header">
@@ -63,10 +71,20 @@ export default function Navbar() {
             </Link>
           </ul>
           <Link to="/signUp">
-            <button className="nav-button">Sign Up</button>
+            <button
+              className={`nav-button ${
+                isLoggedIn === true ? "nav--button-display" : ""
+              }`}
+            >
+              Sign Up
+            </button>
           </Link>
 
-          <div className={`user--logged-in`}>
+          <div
+            className={`user--logged-in ${
+              isLoggedIn === false ? "user--notify-hidden" : ""
+            }`}
+          >
             <div className="nav--notify">
               <img src={Bell} alt="" />
               <p>2</p>
