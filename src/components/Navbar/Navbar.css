@@ -60,7 +60,6 @@
   color: white;
   padding: 1rem 3rem;
   font-size: 1.5rem;
-  display: none;
 }
 
 .nav-button:hover {
@@ -114,4 +113,12 @@
   font-weight: 700;
   font-size: 1.3rem;
   color: #252d3f;
+}
+
+.user--notify-hidden {
+  display: none;
+}
+
+.nav--button-display {
+  display: none;
 }
