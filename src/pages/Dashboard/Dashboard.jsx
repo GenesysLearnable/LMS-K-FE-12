@@ -11,13 +11,13 @@ import Profile from "../../assets/profile.svg";
 import Setting from "../../assets/setting.svg";
 import Status from "../../assets/status.svg";
 import "./Dashboard.css";
-import Assessments from "../DashPages/Assessments";
+import Assessments from "../../pages/Assessments/Assessments";
 import SideDash from "../DashPages/Dashboard";
-import Games from "../DashPages/Games";
-import UserProfile from "../DashPages/Profile";
-import Rewards from "../DashPages/Rewards";
-import Settings from "../DashPages/Settings";
-import Subjects from "../DashPages/Subjects";
+import Games from "../Games/Games";
+import UserProfile from "../Profile/Profile";
+import Rewards from "../Rewards/Rewards";
+import Settings from "../Settings/Settings";
+import Subjects from "../Subjects/Subjects";
 
 const Dashboard = () => {
   const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
