@@ -9,8 +9,10 @@ import SigninBg from "../../assets/SigninBg.png";
 import axios from "../../api/axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useGlobalContext } from "../../context/appContext";
 
 const SignIn = () => {
+  const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
   const [signInData, setSignInData] = useState({
     email: "",
     password: "",
@@ -46,6 +48,8 @@ const SignIn = () => {
       });
       if (response.status === 200 || response.status === 201) {
         toast.success("Signed in successfully!");
+        setIsLoggedIn(true);
+        localStorage.setItem("isLoggedIn", "true"); // Store as a string
         setTimeout(() => {
           window.location.href = "/dashboard";
         }, 5000);
