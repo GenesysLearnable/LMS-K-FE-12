@@ -1,8 +1,11 @@
+import Navbar from "../../components/Navbar/Navbar";
+
 const Dashboard = () => {
   return (
     <>
       <section>
-        <h1>Coming Soon!</h1>
+        <Navbar />
+        <h1 style={{ marginTop: "8rem" }}>Coming Soon!</h1>
       </section>
     </>
   );
