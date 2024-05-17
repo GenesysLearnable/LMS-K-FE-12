@@ -3,7 +3,7 @@ import Rubiks from "../../assets/rubiks.svg";
 import KanbanBoard from "../../assets/kanban.svg";
 import Checklist from "../../assets/checklist.svg";
 import Openbook from "../../assets/lampoverbook.svg";
-import Button from "../Button/Button";
+import { Button } from "../Button/Button";
 
 export default function Personalization() {
   return (

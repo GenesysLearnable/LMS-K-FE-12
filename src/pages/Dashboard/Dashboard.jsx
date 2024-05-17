@@ -5,7 +5,7 @@ import { useGlobalContext } from "../../context/appContext";
 import Award from "../../assets/award.svg";
 import Game from "../../assets/game.svg";
 import Graduation from "../../assets/graduation.svg";
-import Logout from "../../assets/logout.svg";
+import LogoutIcon from "../../assets/logout.svg";
 import People from "../../assets/people.svg";
 import Profile from "../../assets/profile.svg";
 import Setting from "../../assets/setting.svg";
@@ -45,6 +45,12 @@ const Dashboard = () => {
 };
 
 const Sidebar = ({ RenderContent, selectedContent }) => {
+  const Logout = () => {
+    // setIsLoggedIn(true);
+    localStorage.setItem("isLoggedIn", "false");
+    console.log(localStorage);
+  };
+
   return (
     <>
       <div className="sidebar--container">
@@ -126,8 +132,8 @@ const Sidebar = ({ RenderContent, selectedContent }) => {
             Settings
           </li>
 
-          <li className="dash--links">
-            <img src={Logout} alt="" />
+          <li className="dash--links" onClick={Logout}>
+            <img src={LogoutIcon} alt="" />
             Log Out
           </li>
         </ul>

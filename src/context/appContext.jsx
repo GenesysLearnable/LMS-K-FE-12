@@ -5,6 +5,7 @@ const AppContext = React.createContext();
 export const AppProvider = ({ children }) => {
   const [activeNavItem, setActiveNavItem] = useState("home");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [forgotPassActive, setForgotPassActive] = useState(false);
 
   return (
     <AppContext.Provider
@@ -13,6 +14,8 @@ export const AppProvider = ({ children }) => {
         setActiveNavItem,
         isLoggedIn,
         setIsLoggedIn,
+        forgotPassActive,
+        setForgotPassActive,
       }}
     >
       {children}

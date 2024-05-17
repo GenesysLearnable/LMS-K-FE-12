@@ -10,14 +10,21 @@ import axios from "../../api/axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useGlobalContext } from "../../context/appContext";
+import ForgotPassword from "../ForgotPassword/ForgotPassword";
 
 const SignIn = () => {
   const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
+  const { forgotPassActive, setForgotPassActive } = useGlobalContext();
+  const [isDisabled, setIsDisabled] = useState(true);
   const [signInData, setSignInData] = useState({
     email: "",
     password: "",
   });
-  const [isDisabled, setIsDisabled] = useState(true);
+
+  const toggleForgotPassword = () => {
+    setForgotPassActive(true);
+    console.log("clc forgot pass");
+  };
 
   useEffect(() => {
     const anyEmptyField = Object.values(signInData).some(
@@ -41,11 +48,17 @@ const SignIn = () => {
     console.log(signInData);
 
     try {
-      const response = await axios.post("/api/user/signin", signInData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://lms-k-be-12.onrender.com/api/user/signin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(signInData),
+        }
+      );
+
       if (response.status === 200 || response.status === 201) {
         toast.success("Signed in successfully!");
         setIsLoggedIn(true);
@@ -56,7 +69,7 @@ const SignIn = () => {
       }
       console.log(response.status);
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
     }
   };
 
@@ -126,7 +139,9 @@ const SignIn = () => {
                   <input type="checkbox" name="" id="" />
                   <p className="terms">Remember Me</p>
                 </div>
-                <p className="forgot-pass">Forgot Password?</p>
+                <p className="forgot-pass" onClick={toggleForgotPassword}>
+                  Forgot Password?
+                </p>
               </div>
               <div className="form-footer">
                 <h3 style={{ color: "#6C6B6B" }}>
@@ -139,6 +154,8 @@ const SignIn = () => {
             </div>
           </div>
         </div>
+
+        <ForgotPassword />
       </section>
     </>
   );
