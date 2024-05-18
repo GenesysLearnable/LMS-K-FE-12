@@ -12,7 +12,9 @@ const Button = (props) => {
 const BtnFull = (props) => {
   return (
     <Link to={props.link}>
-      <button className={styles["container--btn"]}>{props.content}</button>
+      <button onClick={props.onClick} className={styles["container--btn"]}>
+        {props.content}
+      </button>
     </Link>
   );
 };

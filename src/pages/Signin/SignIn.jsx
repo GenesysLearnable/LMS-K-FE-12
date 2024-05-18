@@ -15,6 +15,7 @@ import ForgotPassword from "../ForgotPassword/ForgotPassword";
 const SignIn = () => {
   const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
   const { forgotPassActive, setForgotPassActive } = useGlobalContext();
+  const { currentScreen, setCurrentScreen } = useGlobalContext();
   const [isDisabled, setIsDisabled] = useState(true);
   const [signInData, setSignInData] = useState({
     email: "",
@@ -22,7 +23,8 @@ const SignIn = () => {
   });
 
   const toggleForgotPassword = () => {
-    setForgotPassActive(true);
+    setForgotPassActive(!forgotPassActive);
+    setCurrentScreen(1);
     console.log("clc forgot pass");
   };
 

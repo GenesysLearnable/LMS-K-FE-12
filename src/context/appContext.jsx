@@ -6,6 +6,7 @@ export const AppProvider = ({ children }) => {
   const [activeNavItem, setActiveNavItem] = useState("home");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [forgotPassActive, setForgotPassActive] = useState(false);
+  const [currentScreen, setCurrentScreen] = useState();
 
   return (
     <AppContext.Provider
@@ -16,6 +17,8 @@ export const AppProvider = ({ children }) => {
         setIsLoggedIn,
         forgotPassActive,
         setForgotPassActive,
+        currentScreen,
+        setCurrentScreen,
       }}
     >
       {children}
