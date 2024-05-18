@@ -5,7 +5,7 @@ import { SignUp } from "./pages/Signup/Signup";
 import SignIn from "./pages/Signin/SignIn";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { useGlobalContext } from "./context/appContext";
-import Courses from "./pages/Courses/Courses";
+import Courses from "./pages/DashPages/Courses/Courses";
 import About from "./pages/About/About";
 
 const App = () => {
