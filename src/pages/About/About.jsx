@@ -2,25 +2,37 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer"
 import styles from './About.module.css'
 import AboutNav from "./AboutNav";
-import { Routes, Route } from "react-router-dom";
-import Mission from "./Mission";
-import Approach from "../About/Approach"
-import Contact from "./Contact"
+import { useState } from "react";
+import Mission from './Mission'
+import Approach from './Approach'
+import Contact from './Contact'
 
 const About = () => {
+
+  const [activeSection, setActiveSection] = useState('mission');
+
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'mission':
+        return <Mission />;
+      case 'approach':
+        return <Approach />;
+      case 'aboutcontact':
+        return <Contact />;
+      default:
+        return <Mission />;
+    }
+  };
+
   return (
     <>
         <div>
         <Navbar />
         <h2 className={styles.title}>About us!</h2>
-        <AboutNav />
-          <div className={styles.content}>
-            <Routes>
-              <Route path="/" element={<Mission />} />
-              <Route path="/Approach" element={<Approach />} />
-              <Route path="/Contact" element={<Contact />} />
-            </Routes>
-          </div>
+        <AboutNav setActiveSection={setActiveSection} />
+        <div className={styles.content}>
+          {renderContent()}
+        </div>
         <Footer />
         </div>
     </>

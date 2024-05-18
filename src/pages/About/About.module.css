@@ -24,7 +24,8 @@
     border: 1px solid red;
 }
 
-.navlistitem {
+.navlistitem > a {
     font-size: 32px;
     font-weight: 100;
+    color: rgba(244, 175, 136, 1);
 }
