@@ -1,0 +1,20 @@
+.container {
+    width: 100%;
+}
+
+.abt-header {
+    margin-top: 150px;
+    color: rgba(113, 53, 191, 1);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    margin-bottom: -2rem;
+    width: 100%;
+}
+
+/* --------------------About Nav -------------------------- */
+
