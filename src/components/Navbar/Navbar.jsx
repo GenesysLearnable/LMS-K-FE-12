@@ -18,15 +18,19 @@ export default function Navbar() {
     const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
     if (storedIsLoggedIn) {
       setIsLoggedIn(storedIsLoggedIn === "true"); // Convert the string to a boolean
+    } else {
+      setIsLoggedIn(storedIsLoggedIn === "false");
     }
   }, []);
 
   return (
     <header className="header">
       <nav className="nav">
-        <div className="left-section">
-          <img src={kidera} alt="" />
-        </div>
+        <Link to="/">
+          <div className="left-section">
+            <img src={kidera} alt="" />
+          </div>
+        </Link>
         <div className="right-section">
           <ul className="nav-list">
             <Link to="/">

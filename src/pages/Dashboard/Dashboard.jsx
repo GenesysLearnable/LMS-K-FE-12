@@ -5,19 +5,19 @@ import { useGlobalContext } from "../../context/appContext";
 import Award from "../../assets/award.svg";
 import Game from "../../assets/game.svg";
 import Graduation from "../../assets/graduation.svg";
-import Logout from "../../assets/logout.svg";
+import LogoutIcon from "../../assets/logout.svg";
 import People from "../../assets/people.svg";
 import Profile from "../../assets/profile.svg";
 import Setting from "../../assets/setting.svg";
 import Status from "../../assets/status.svg";
 import "./Dashboard.css";
-import Assessments from "../DashPages/Assessments";
-import SideDash from "../DashPages/Dashboard";
-import Games from "../DashPages/Games";
-import UserProfile from "../DashPages/Profile";
-import Rewards from "../DashPages/Rewards";
-import Settings from "../DashPages/Settings";
-import Subjects from "../DashPages/Subjects";
+import Assessments from "../DashPages/Assessments/Assessments";
+import SideDash from "../DashPages/SideDash/SideDash";
+import Games from "../DashPages/Games/Games";
+import UserProfile from "../DashPages/Profile/Profile";
+import Rewards from "../DashPages/Rewards/Rewards";
+import Settings from "../DashPages/Settings/Settings";
+import Subjects from "../DashPages/Subjects/Subjects";
 
 const Dashboard = () => {
   const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
@@ -45,6 +45,12 @@ const Dashboard = () => {
 };
 
 const Sidebar = ({ RenderContent, selectedContent }) => {
+  const Logout = () => {
+    // setIsLoggedIn(true);
+    localStorage.setItem("isLoggedIn", "false");
+    console.log(localStorage);
+  };
+
   return (
     <>
       <div className="sidebar--container">
@@ -126,8 +132,8 @@ const Sidebar = ({ RenderContent, selectedContent }) => {
             Settings
           </li>
 
-          <li className="dash--links">
-            <img src={Logout} alt="" />
+          <li className="dash--links" onClick={Logout}>
+            <img src={LogoutIcon} alt="" />
             Log Out
           </li>
         </ul>
