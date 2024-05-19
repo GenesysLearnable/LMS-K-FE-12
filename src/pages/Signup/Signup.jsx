@@ -48,24 +48,30 @@ const SignUp = () => {
     } else {
       setErrorMessage("");
       try {
-        const response = await axios.post("/api/user/signup", userData, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        if (response.status === 200 || response.status === 201) {
+        const response = await fetch(
+          "https://lms-k-be-12.onrender.com/api/user/signup",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+          }
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
           toast.success("Account created successfully!");
           setTimeout(() => {
-            // Change the URL to the sign-in page
             window.location.href = "/signin";
           }, 5000);
+        } else {
+          toast.error(data.message + " Sign in instead");
         }
-        console.log(response.status);
+        console.log(response);
       } catch (error) {
-        if (error.response.status === 400) {
-          toast.error("Account already exists!");
-        }
-        console.log(error.response);
+        console.log(error);
       }
     }
   };

@@ -10,14 +10,23 @@ import axios from "../../api/axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useGlobalContext } from "../../context/appContext";
+import ForgotPassword from "../ForgotPassword/ForgotPassword";
 
 const SignIn = () => {
   const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
+  const { forgotPassActive, setForgotPassActive } = useGlobalContext();
+  const { currentScreen, setCurrentScreen } = useGlobalContext();
+  const [isDisabled, setIsDisabled] = useState(true);
   const [signInData, setSignInData] = useState({
     email: "",
     password: "",
   });
-  const [isDisabled, setIsDisabled] = useState(true);
+
+  const toggleForgotPassword = () => {
+    setForgotPassActive(!forgotPassActive);
+    setCurrentScreen(1);
+    console.log("clc forgot pass");
+  };
 
   useEffect(() => {
     const anyEmptyField = Object.values(signInData).some(
@@ -38,25 +47,34 @@ const SignIn = () => {
 
   const signIn = async (e) => {
     e.preventDefault();
-    console.log(signInData);
 
     try {
-      const response = await axios.post("/api/user/signin", signInData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      if (response.status === 200 || response.status === 201) {
+      const response = await fetch(
+        "https://lms-k-be-12.onrender.com/api/user/signin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(signInData),
+        }
+      );
+
+      const data = await response.json();
+      console.log(response.ok);
+
+      if (response.ok) {
         toast.success("Signed in successfully!");
         setIsLoggedIn(true);
-        localStorage.setItem("isLoggedIn", "true"); // Store as a string
+        localStorage.setItem("isLoggedIn", "true");
         setTimeout(() => {
           window.location.href = "/dashboard";
         }, 5000);
+      } else {
+        toast.error(data.message);
       }
-      console.log(response.status);
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
     }
   };
 
@@ -126,7 +144,9 @@ const SignIn = () => {
                   <input type="checkbox" name="" id="" />
                   <p className="terms">Remember Me</p>
                 </div>
-                <p className="forgot-pass">Forgot Password?</p>
+                <p className="forgot-pass" onClick={toggleForgotPassword}>
+                  Forgot Password?
+                </p>
               </div>
               <div className="form-footer">
                 <h3 style={{ color: "#6C6B6B" }}>
@@ -139,6 +159,8 @@ const SignIn = () => {
             </div>
           </div>
         </div>
+
+        <ForgotPassword />
       </section>
     </>
   );

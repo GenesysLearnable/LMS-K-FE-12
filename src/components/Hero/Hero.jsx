@@ -1,6 +1,6 @@
 import styles from "./Hero.module.css";
 import heroimage from "../../assets/heroimage.png";
-import Button from "../Button/Button";
+import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
