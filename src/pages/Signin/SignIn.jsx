@@ -47,7 +47,6 @@ const SignIn = () => {
 
   const signIn = async (e) => {
     e.preventDefault();
-    console.log(signInData);
 
     try {
       const response = await fetch(
@@ -61,15 +60,19 @@ const SignIn = () => {
         }
       );
 
-      if (response.status === 200 || response.status === 201) {
+      const data = await response.json();
+      console.log(response.ok);
+
+      if (response.ok) {
         toast.success("Signed in successfully!");
         setIsLoggedIn(true);
-        localStorage.setItem("isLoggedIn", "true"); // Store as a string
+        localStorage.setItem("isLoggedIn", "true");
         setTimeout(() => {
           window.location.href = "/dashboard";
         }, 5000);
+      } else {
+        toast.error(data.message);
       }
-      console.log(response.status);
     } catch (error) {
       console.log(error);
     }

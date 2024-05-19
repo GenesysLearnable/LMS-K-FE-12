@@ -59,20 +59,19 @@ const SignUp = () => {
           }
         );
 
-        if (response.status === 200 || response.status === 201) {
+        const data = await response.json();
+
+        if (response.ok) {
           toast.success("Account created successfully!");
           setTimeout(() => {
-            // Change the URL to the sign-in page
             window.location.href = "/signin";
           }, 5000);
+        } else {
+          toast.error(data.message + " Sign in instead");
         }
-        console.log(response.status);
+        console.log(response);
       } catch (error) {
-        // Handle error
         console.log(error);
-        if (error.response.status === 400) {
-          toast.error("Account already exists!");
-        }
       }
     }
   };
