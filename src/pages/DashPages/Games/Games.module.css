@@ -1,0 +1,85 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Comic Sans MS";
+  background-color: #ffffff;
+  position: relative;
+}
+
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+.purple {
+  color: #7939cc;
+}
+.first-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.second-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.second-section {
+  background-color: #dfc6ff;
+  margin: 0px auto;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 25px;
+}
+.btn-2 {
+  background-color: #dfc6ff;
+  outline: none;
+  border: none;
+  font-family: "Comic Sans MS";
+}
+.btn-1 {
+  background-color: #442073;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 7px;
+  border-radius: 12px;
+  font-family: "Comic Sans MS";
+}
+
+.Playbutton {
+  background-color: #f4af88;
+  border-radius: 10px;
+  font-family: "Comic Sans MS";
+  padding: 7px;
+  width: 80px;
+  color: white;
+}
+.Playbutton1 {
+  background-color: #cc5512;
+  border-radius: 10px;
+  font-family: "Comic Sans MS";
+  padding: 7px;
+  width: 80px;
+  color: white;
+}
+.last-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  border-bottom: 2px solid #7135bf;
+  color: #7135bf;
+  width: fit-content;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
