@@ -1,0 +1,56 @@
+body {
+  font-family: "Comic Sans MS";
+  background-color: FFFFFF;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+}
+
+.flexsection {
+  display: flex;
+}
+
+.textsection {
+  margin-left: 100px;
+  padding-left: 100px;
+}
+.flexsection {
+  margin-top: 20px;
+}
+
+.purple {
+  color: #7939cc;
+}
+
+.orange {
+  color: #f9742a;
+}
+.hello {
+  color: #7939cc;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-size: x-large;
+}
+.KidsinBalloon {
+  padding-left: 50px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0%;
+  padding-top: 0px;
+}
+.textsection {
+  padding-top: 100px;
+  text-align: center;
+}
+
+button {
+  font-family: "Comic Sans MS";
+  background-color: #f9742a;
+  width: 70%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 15px;
+  font-size: large;
+  color: white;
+  margin-top: 15px;
+}

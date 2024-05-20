@@ -4,9 +4,6 @@ import Home from "./pages/Home/Home";
 import { SignUp } from "./pages/Signup/Signup";
 import SignIn from "./pages/Signin/SignIn";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import { useGlobalContext } from "./context/appContext";
-import Courses from "./pages/DashPages/Courses/Courses";
-import About from "./pages/About/About";
 
 const App = () => {
   const location = useLocation();
@@ -26,8 +23,6 @@ const App = () => {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/courses" element={<Courses />} />
-      <Route path="/about" element={<About />} />
     </Routes>
   );
 };
