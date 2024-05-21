@@ -70,7 +70,7 @@ export default function Navbar() {
                 }`}
                 onClick={() => toggleActiveLink("courses")}
               >
-                Subjects
+                Courses
               </li>
             </Link>
           </ul>
