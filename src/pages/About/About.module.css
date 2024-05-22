@@ -1,20 +1,121 @@
+.title {
+    margin: 11rem 0 1rem 4rem;
+    color: rgba(113, 53, 191, 1);
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.line {
+    color: rgba(223, 198, 255, 1);
+    width: 1030px;
+    height: 5px;
+    background-color: rgba(223, 198, 255, 1);
+    border: none;
+}
+
+/* -------------AboutNav---------------------- */
 .container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    font-style: "Comic Neue";
 }
 
-.abt-header {
-    margin-top: 150px;
-    color: rgba(113, 53, 191, 1);
-    font-size: 40px;
-    font-weight: 700;
+.navlist {
+    width: 1030px;
+    list-style-type: none;
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    margin-bottom: -2rem;
+.navlistitem > a {
+    font-size: 32px;
+    font-weight: 100;
+    color: rgba(244, 175, 136, 1);
+}
+
+.active{
+    color: rgba(230, 95, 20, 1);
+}
+
+/* ------------ Mission Section------------- */
+.ma_container {
     width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin: 20px 0;
 }
 
-/* --------------------About Nav -------------------------- */
+.ma_content {
+    width: 1030px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
+.cards {
+    width: 1027px;
+    height: 276px;
+    display: flex;
+    gap: 70px;
+}
+
+.cards > .image_container {
+    width: 300px;
+}
+
+.cards > .text_container {
+    width: 670px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card_title {
+    font-size: 40px;
+}
+
+.card_info {
+    font-size: 24px;
+    text-align: justify;
+    color: rgba(80, 80, 80, 1);
+}
+
+/* ---------contact-------- */
+.ca_content {
+    width: 1030px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq, .enquiries{
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.enquiries {
+    margin-top: 1.5rem;
+}
+
+.faq > span, a {
+    color: rgba(121, 57, 204, 1);
+}
+
+.icon {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconify {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

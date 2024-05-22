@@ -1,7 +1,13 @@
+import styles from './Sidedash.module.css'
+
 const SideDash = () => {
+
+
   return (
     <>
-      <div style={{ fontSize: "3rem" }}>Side Dash</div>
+      <div className={styles.container} style={{ fontSize: "3rem" }}>
+        Welcome
+      </div>
     </>
   );
 };
