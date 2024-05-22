@@ -5,7 +5,7 @@ import { SignUp } from "./pages/Signup/Signup";
 import SignIn from "./pages/Signin/SignIn";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { useGlobalContext } from "./context/appContext";
-import Courses from "./pages/Courses/Courses";
+// import Courses from "./pages/DashPages/Subjects/Subjects";
 import About from "./pages/About/About";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
     location.pathname === "/" && setActiveNavItem("home");
     location.pathname === "/dashboard" && setActiveNavItem("dashboard");
     location.pathname === "/about" && setActiveNavItem("about");
-    location.pathname === "/courses" && setActiveNavItem("courses");
+    location.pathname === "/subjects" && setActiveNavItem("subjects");
     // Ends..
   }, [location]);
   return (
@@ -26,7 +26,7 @@ const App = () => {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/courses" element={<Courses />} />
+      {/* <Route path="/courses" element={<Courses />} /> */}
       <Route path="/about" element={<About />} />
     </Routes>
   );
