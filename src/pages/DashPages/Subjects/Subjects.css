@@ -1,0 +1,78 @@
+.subject-header--container {
+  margin: 1rem 0 1rem 0;
+}
+.subject--header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.subject--desc {
+  font-size: 20px;
+  margin-top: 0.4rem;
+  color: #f9742a;
+}
+
+.course--container {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.course--title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-card--container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.course--card img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.course--card .course--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course--item p {
+  font-size: 1.75rem;
+}
+
+.course--item button {
+  outline: none;
+  border: none;
+  background: #3d3e40;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0.5rem 1.3rem;
+  border-radius: 7px;
+}
+
+.course--description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.course--description p {
+  width: 60%;
+  font-size: 17px;
+}
+
+.stars--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars--container img {
+  height: 1rem;
+}
