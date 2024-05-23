@@ -41,68 +41,83 @@ const Sidebar = () => {
             Dashboard
           </li>
         </Link>
-        <li
-          className={`dash--links ${
-            location.pathname === "/dashboard/profile" ? "sidenav--active" : ""
-          }`}
-        >
-          <Link to="/dashboard/profile">
+
+        <Link to="/dashboard/profile">
+          <li
+            className={`dash--links ${
+              location.pathname === "/dashboard/profile"
+                ? "sidenav--active"
+                : ""
+            }`}
+          >
             <img src={Profile} alt="Profile" />
             My Profile
-          </Link>
-        </li>
-        <li
-          className={`dash--links ${
-            location.pathname === "/dashboard/subjects" ? "sidenav--active" : ""
-          }`}
-        >
-          <Link to="/dashboard/subjects">
+          </li>
+        </Link>
+
+        <Link to="/dashboard/subjects">
+          <li
+            className={`dash--links ${
+              location.pathname === "/dashboard/subjects"
+                ? "sidenav--active"
+                : ""
+            }`}
+          >
             <img src={Graduation} alt="Subjects" />
             Subjects
-          </Link>
-        </li>
-        <li
-          className={`dash--links ${
-            location.pathname === "/dashboard/assessments"
-              ? "sidenav--active"
-              : ""
-          }`}
-        >
-          <Link to="/dashboard/assessments">
+          </li>
+        </Link>
+
+        <Link to="/dashboard/assessments">
+          <li
+            className={`dash--links ${
+              location.pathname === "/dashboard/assessments"
+                ? "sidenav--active"
+                : ""
+            }`}
+          >
             <img src={People} alt="Assessments" />
             Assessments
-          </Link>
-        </li>
-        <li
-          className={`dash--links ${
-            location.pathname === "/dashboard/rewards" ? "sidenav--active" : ""
-          }`}
-        >
-          <Link to="/dashboard/rewards">
+          </li>
+        </Link>
+
+        <Link to="/dashboard/rewards">
+          <li
+            className={`dash--links ${
+              location.pathname === "/dashboard/rewards"
+                ? "sidenav--active"
+                : ""
+            }`}
+          >
             <img src={Award} alt="Rewards" />
             Rewards
-          </Link>
-        </li>
-        <li
-          className={`dash--links ${
-            location.pathname === "/dashboard/games" ? "sidenav--active" : ""
-          }`}
-        >
-          <Link to="/dashboard/games">
+          </li>
+        </Link>
+
+        <Link to="/dashboard/games">
+          <li
+            className={`dash--links ${
+              location.pathname === "/dashboard/games" ? "sidenav--active" : ""
+            }`}
+          >
             <img src={Game} alt="Games" />
             Games
-          </Link>
-        </li>
-        <li
-          className={`dash--links ${
-            location.pathname === "/dashboard/settings" ? "sidenav--active" : ""
-          }`}
-        >
-          <Link to="/dashboard/settings">
+          </li>
+        </Link>
+
+        <Link to="/dashboard/settings">
+          <li
+            className={`dash--links ${
+              location.pathname === "/dashboard/settings"
+                ? "sidenav--active"
+                : ""
+            }`}
+          >
             <img src={Setting} alt="Settings" />
             Settings
-          </Link>
-        </li>
+          </li>
+        </Link>
+
         <li className="dash--links" onClick={handleLogout}>
           <img src={LogoutIcon} alt="Logout" />
           Log Out

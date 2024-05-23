@@ -60,9 +60,9 @@
   border-radius: 0.8rem 0 0 0.8rem;
 }
 
-.dash--links:last-child {
+/* .dash--links:last-child {
   color: #ff0202;
-}
+} */
 
 .dash--links img {
   height: 2rem;
