@@ -1,9 +1,11 @@
-import styles from './Profile.module.css'
+import styles from "./Profile.module.css";
 
 const UserProfile = () => {
   return (
     <>
-      <div className={styles.container} style={{ fontSize: "3rem" }}>Profile</div>
+      <div className={styles.container} style={{ fontSize: "3rem" }}>
+        Profile
+      </div>
     </>
   );
 };

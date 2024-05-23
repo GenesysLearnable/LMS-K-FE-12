@@ -1,0 +1,41 @@
+.containerMain {
+    margin-left: 4rem;
+    margin-top: 4rem;
+    width: 697.75px;
+    height: 622.55px;
+}
+
+.toptext {
+    font-size: 43.38px;
+    font-weight: 700;
+    width: 445px;
+    height: 61px;
+    color: #7939CC;
+    margin: auto;
+}
+
+.sideA {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.general {
+    font-size: 32.53px;
+    font-weight: 700;
+    line-height: 45.55px;
+}
+
+.toggle1 {
+    font-size: 21.69px;
+    font-weight: 400;
+}
+
+
+.sideB {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
