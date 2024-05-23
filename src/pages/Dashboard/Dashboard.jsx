@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import DashAvatar from "../../assets/dash_Avatar.png";
+// import DashAvatar from "../../assets/dash_Avatar.png";
 import { useGlobalContext } from "../../context/appContext";
 import Award from "../../assets/award.svg";
 import Game from "../../assets/game.svg";
@@ -54,12 +54,12 @@ const Sidebar = ({ RenderContent, selectedContent }) => {
   return (
     <>
       <div className="sidebar--container">
-        <div className="dash--avatar">
+        {/* <div className="dash--avatar">
           <div className="dash--image-container">
             <img src={DashAvatar} alt="" />
           </div>
           <p className="dash--user-name">Chujac Kingsley</p>
-        </div>
+        </div> */}
 
         <ul className="dash--link-container">
           <li
@@ -132,7 +132,7 @@ const Sidebar = ({ RenderContent, selectedContent }) => {
             Settings
           </li>
 
-          <li className="dash--links" onClick={Logout}>
+          <li className="dash--links logout" onClick={Logout}>
             <img src={LogoutIcon} alt="" />
             Log Out
           </li>
