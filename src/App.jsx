@@ -4,29 +4,26 @@ import Home from "./pages/Home/Home";
 import { SignUp } from "./pages/Signup/Signup";
 import SignIn from "./pages/Signin/SignIn";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import { useGlobalContext } from "./context/appContext";
-// import Courses from "./pages/DashPages/Subjects/Subjects";
 import About from "./pages/About/About";
+import { useGlobalContext } from "./context/appContext";
 
 const App = () => {
   const location = useLocation();
-  const { activeNavItem, setActiveNavItem } = useGlobalContext();
+  const { setActiveNavItem } = useGlobalContext();
 
   useEffect(() => {
-    // Manipulates Nav ActiveState
-    location.pathname === "/" && setActiveNavItem("home");
-    location.pathname === "/dashboard" && setActiveNavItem("dashboard");
-    location.pathname === "/about" && setActiveNavItem("about");
-    location.pathname === "/subjects" && setActiveNavItem("subjects");
-    // Ends..
-  }, [location]);
+    if (location.pathname === "/") setActiveNavItem("home");
+    else if (location.pathname.startsWith("/dashboard"))
+      setActiveNavItem("dashboard");
+    else if (location.pathname === "/about") setActiveNavItem("about");
+  }, [location, setActiveNavItem]);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      {/* <Route path="/courses" element={<Courses />} /> */}
+      <Route path="/dashboard/*" element={<Dashboard />} />
       <Route path="/about" element={<About />} />
     </Routes>
   );

@@ -4,7 +4,7 @@ import { English, Math, BasicScience, General } from "../../../utils/Subjects";
 const Subjects = () => {
   return (
     <>
-      <section>
+      <section className="subject--main">
         <div className="subject-header--container">
           <p className="subject--header">Subjects</p>
           <p className="subject--desc">
