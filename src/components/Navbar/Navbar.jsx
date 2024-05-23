@@ -43,7 +43,7 @@ export default function Navbar() {
                 Home
               </li>
             </Link>
-            <Link to="/dashboard">
+            {/* <Link to="/dashboard">
               <li
                 className={`nav-list-item ${
                   activeNavItem === "dashboard" ? "nav-active" : ""
@@ -52,7 +52,7 @@ export default function Navbar() {
               >
                 Dashboard
               </li>
-            </Link>
+            </Link> */}
             <Link to="/about">
               <li
                 className={`nav-list-item ${
@@ -63,7 +63,7 @@ export default function Navbar() {
                 About
               </li>
             </Link>
-            <Link to="/courses">
+            {/* <Link to="/courses">
               <li
                 className={`nav-list-item ${
                   activeNavItem === "courses" ? "nav-active" : ""
@@ -72,7 +72,7 @@ export default function Navbar() {
               >
                 Courses
               </li>
-            </Link>
+            </Link> */}
           </ul>
           <Link to="/signUp">
             <button

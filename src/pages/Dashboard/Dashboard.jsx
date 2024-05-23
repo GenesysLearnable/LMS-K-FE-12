@@ -6,7 +6,7 @@ import Assessments from "../DashPages/Assessments/Assessments";
 import Games from "../DashPages/Games/Games";
 import UserProfile from "../DashPages/Profile/Profile";
 import Rewards from "../DashPages/Rewards/Rewards";
-import Settings from "../DashPages/Settings/Settings";
+import Settings from "../Settings/Settings";
 import Subjects from "../DashPages/Subjects/Subjects";
 import "./Dashboard.css";
 
