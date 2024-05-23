@@ -15,7 +15,7 @@ import "./Sidebar.css";
 
 const Sidebar = () => {
   const location = useLocation();
-  const { setActiveNavItem } = useGlobalContext();
+  // const { setActiveNavItem } = useGlobalContext();
 
   const handleLogout = () => {
     localStorage.setItem("isLoggedIn", "false");
@@ -118,7 +118,7 @@ const Sidebar = () => {
           </li>
         </Link>
 
-        <li className="dash--links" onClick={handleLogout}>
+        <li className="dash--links dash--link-red" onClick={handleLogout}>
           <img src={LogoutIcon} alt="Logout" />
           Log Out
         </li>
