@@ -6,9 +6,10 @@ import Assessments from "../DashPages/Assessments/Assessments";
 import Games from "../DashPages/Games/Games";
 import UserProfile from "../DashPages/Profile/Profile";
 import Rewards from "../DashPages/Rewards/Rewards";
-import Settings from "../Settings/Settings";
+import Settings from "../DashPages/Settings/Settings.jsx";
 import Subjects from "../DashPages/Subjects/Subjects";
 import "./Dashboard.css";
+
 
 const Dashboard = () => {
   return (
@@ -25,6 +26,7 @@ const Dashboard = () => {
             <Route path="rewards" element={<Rewards />} />
             <Route path="settings" element={<Settings />} />
             <Route path="subjects" element={<Subjects />} />
+           
           </Routes>
         </div>
       </div>
