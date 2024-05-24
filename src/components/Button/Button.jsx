@@ -1,19 +1,20 @@
 import styles from "./Button.module.css";
 import { Link } from "react-router-dom";
+import classNames from 'classnames';
 
-const Button = (props) => {
+const Button = ({ link, content, className }) => {
   return (
-    <Link to={props.link}>
-      <button className={styles["herobtn"]}>{props.content}</button>
+    <Link to={link}>
+      <button className={classNames(styles.herobtn, className)}>{content}</button>
     </Link>
   );
 };
 
-const BtnFull = (props) => {
+const BtnFull = ({ link, content, onClick, className }) => {
   return (
-    <Link to={props.link}>
-      <button onClick={props.onClick} className={styles["container--btn"]}>
-        {props.content}
+    <Link to={link}>
+      <button onClick={onClick} className={classNames(styles["container--btn"], className)}>
+        {content}
       </button>
     </Link>
   );

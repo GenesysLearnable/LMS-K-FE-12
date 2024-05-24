@@ -1,3 +1,324 @@
 .container {
+    width: calc(100vw - 15rem);
+    padding: 0 1rem;
+    height: 70rem;
+    /* overflow-y: scroll; */
+}
+
+.greeting {
+    color: rgba(113, 53, 191, 1);
+    font-size: 34px;
+    font-weight: 700;
+}
+
+/* -------------------------------Hero Section-------------------------- */
+
+.hero_section {
+    display: flex;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.hero_left {
+    width: 750px;
+    height: 278px;
+    background-color: rgba(230, 95, 20, 1);
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+}
+
+.dashboard-hero-txt {
+    position: absolute;
+    margin: 16px 0 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dashboard-hero-first-text-cont {
+   width: 428px;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.dashboard-hero-first-text{
+    font-family: 'Comic Sans MS';
+    font-size: 25px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.lesson {
+    font-family: 'Comic Sans MS';
+    font-size: 25px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: -5px;
+}
+
+.dashboard-hero-txt > p {
+    width: 289px;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
+.dashboard-hero-img {
+    width: 380px;
+    margin: 1rem 0 0 17.5rem;
+}
+
+.hero_btn {
+    background-color: rgba(113, 53, 191, 1);
+    width: 179px;
+    height: 58px;
+    border: 1px solid rgba(53, 25, 89, 1);
+}
+
+.hero_right {
+    width: 361px;
+    height: 278px;
+    background-color: rgba(245, 237, 255, 0.5);
+    border-radius: 20px;
+    padding: 10px 15px 0 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.recent_txt { 
+    width: 301px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.recently, 
+.course_section, 
+.progress_section_txt 
+{
+    font-family: 'Comic Sans MS';
+    color: rgba(249, 116, 42, 1);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44.8px;
+}
+
+.recent_txt_right {
+    font-family: 'Comic Sans MS';
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}
+
+.recent_cards {
+    display: grid;
+    grid-template-columns: (1fr, no-repeat);
+    grid-gap: 8px;
+}
+
+.recent_card {
+    width: 282px;
+    height: 82px;
+    background-color: rgba(248, 248, 249, 1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+                  -4px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    font-family: 'Actor';
+}
+
+.phonics {
+    font-family: 'Actor';
+    font-size: 26px;
+    font-weight: 400;
+    color: rgba(37, 45, 63, 1);
+}
+
+.phonics_desc {
+    font-family: 'Actor';
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(86, 86, 85, 1);
+}
+
+/* -------------------------------Main Section------------------------------- */
+
+.main_section {
+    height: 712px;
+    margin-top: 3rem;
+}
+
+.main_content {
+    display: flex;
+    gap: 20px;
+}
+
+.main-header-container, 
+.subject {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header-container > div {
+    display: flex;
+    gap: 79px;
+}
+
+.main_left_section {
+    width: 700px;
+    height: 672px;
+    border-radius: 20px;
+    background-color: rgba(245, 237, 255, 0.5);
+    padding: 10px;
+}
+
+.subject_container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.subject {
+    margin-bottom: 1rem;
+}
+
+.subject_title {
+    font-size: 32px;
+    font-family: 'Comic Sans MS';
+    font-weight: 400;
+}
+
+.view_more {
+    font-family: 'Comic Sans MS';
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(80, 80, 80, 1);
+}
+
+.subject_body{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.subject_body > p {
+    font-size: 23px;
+    font-family: 'Comic Sans MS';
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}
+
+.subject_body > button {
+    width: 98px;
+    height: 26px;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    background-color: rgba(61, 62, 64, 1);
+}
+
+.subject_card{
+    display: flex;
+    gap: 35px;
+    padding: 0 0.5rem;
+}
+
+.subject_img {
+    width: 318px;
+    height: 179px;
+    border-radius: 20px;
+}
+
+.subject_description {
+    font-family: 'Comic Sans MS';
+    font-size: 12px;
+    font-weight: 400;
+    width: 195px;
+    color: rgba(90, 89, 89, 1);
+}
+
+.challenge {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.challenge_container {
+    display: flex;
+    justify-content: center;
     margin-top: 1rem;
+}
+
+.challenge_card {
+    display: flex;
+    justify-content: space-between;
+    gap: 165px;
+}
+
+.challenge_img {
+    display: flex;
+    align-items: center;
+    height: 181px;
+}
+
+.challenge_body {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.challenge_cap {
+    font-family: 'Comic Sans MS';
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}
+
+.rating {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(68, 32, 115, 1);
+}
+
+/* ---------------------------progress section------------------------------ */
+.main_right_section {
+    display: grid;
+    grid-gap: 20px;
+    width: 419px;
+    height: 672px;
+    background-color: rgba(245, 237, 255, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.main_progress {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.progress_title {
+    font-family: 'Comic Sans MS';
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.progress_level {
+    font-size: 20px;
+    font-family: 'Comic Sans MS';
+}
+
+.main_progress_content {
+    display: grid;
+    grid-gap: 8px;
 }
