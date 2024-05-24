@@ -5,7 +5,8 @@ import{ Button } from '../../../components/Button/Button'
 import heroarrowright from '../../../assets/heroarrowright.svg'
 import videoicon from '../../../assets/videoicon.svg'
 import { Link } from 'react-router-dom'
-import { DashSubject, DashChallenges, progressData } from '../../../utils/Dashboard'
+import { DashSubject, DashChallenges} from '../../../utils/Dashboard'
+import CircularProgressBar from '../../../utils/CircularProgressBar'
 
 const SideDash = () => {
 
@@ -83,7 +84,9 @@ const SideDash = () => {
                   <p className={styles.course_section}>Courses</p>
                   <div>
                     <p className={styles.progress_section_txt}>Achievements</p>
-                    <p className={styles.recent_txt_right}>view all <img src={heroarrowright} alt="Arrow"/></p>
+                    <Link>
+                      <p className={styles.recent_txt_right}>view all <img src={heroarrowright} alt="Arrow"/></p>
+                    </Link>
                   </div>   
             </div>
 
@@ -92,7 +95,9 @@ const SideDash = () => {
               <section className={styles.main_left_section}>
                     <div className={styles.subject}>
                       <p className={styles.subject_title}>Subjects</p>
-                      <p className={styles.view_more}>View more <img src={heroarrowright} alt="View More" /></p>
+                      <Link>
+                        <p className={styles.view_more}>View more <img src={heroarrowright} alt="View More" /></p>
+                      </Link>
                     </div>
 
                     <div className={styles.subject_container}>
@@ -114,7 +119,9 @@ const SideDash = () => {
 
                     <div className={styles.challenge}>
                       <p className={styles.subject_title}>Challenges</p>
-                      <p className={styles.view_more}>View more <img src={heroarrowright} alt="View More" /></p>
+                      <Link>
+                        <p className={styles.view_more}>View more <img src={heroarrowright} alt="View More" /></p>
+                      </Link>
                     </div>
 
                     <div className={styles.challenge_container}>
@@ -133,7 +140,53 @@ const SideDash = () => {
               </section>
 
               <section className={styles.main_right_section}>
-                
+                  <div className={styles.main_progress}>
+                      <CircularProgressBar
+                        value={100}
+                        color="rgba(86, 195, 60, 1)"
+                      />
+                      <div className={styles.main_progress_content}>
+                        <p className={styles.progress_title}>English Hero</p>
+                        <p className={styles.progress_level} style={{ color: "rgba(86, 195, 60, 1)" }}>16/16 completed</p>
+                      </div>
+                  </div>
+                  <div className={styles.main_progress}>
+                      <CircularProgressBar
+                        value={65}
+                        color="rgba(151, 71, 255, 1)"
+                      />
+                      <p className={styles.progress_title}>Rhymes</p>
+                  </div>
+                 <div className={styles.main_progress}>
+                      <CircularProgressBar
+                        value={50}
+                        color="rgba(196, 126, 9, 1)"
+                      />
+                      <div className={styles.main_progress_content}>
+                        <p className={styles.progress_title}>Maths Mania</p>
+                        <p className={styles.progress_level} style={{ color: "rgba(196, 126, 9, 1)" }}>8/16 completed</p>
+                      </div>
+                 </div>
+                 <div className={styles.main_progress}>
+                      <CircularProgressBar
+                        value={30}
+                        color="rgba(255, 0, 0, 1)"
+                      />
+                      <div className={styles.main_progress_content}>
+                        <p className={styles.progress_title}>Challenges</p>
+                        <p className={styles.progress_level} style={{ color: "rgba(255, 0, 0, 1)" }}>3/10 completed</p>
+                      </div>
+                 </div>
+                  <div className={styles.main_progress}>
+                      <CircularProgressBar
+                        value={0}
+                        color="#d6d6d6"
+                      />
+                      <div className={styles.main_progress_content}>
+                        <p className={styles.progress_title}>Upgrade to level 3</p>
+                        <p className={styles.progress_level} style={{ color: "rgba(255, 0, 0, 1)" }}>0/16 completed</p>
+                      </div>
+                  </div>
               </section>
 
             </section>             

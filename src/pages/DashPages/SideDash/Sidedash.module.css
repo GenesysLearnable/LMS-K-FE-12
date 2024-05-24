@@ -292,8 +292,33 @@
 
 /* ---------------------------progress section------------------------------ */
 .main_right_section {
+    display: grid;
+    grid-gap: 20px;
     width: 419px;
     height: 672px;
     background-color: rgba(245, 237, 255, 0.5);
     border-radius: 20px;
+    padding: 10px;
+}
+
+.main_progress {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.progress_title {
+    font-family: 'Comic Sans MS';
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.progress_level {
+    font-size: 20px;
+    font-family: 'Comic Sans MS';
+}
+
+.main_progress_content {
+    display: grid;
+    grid-gap: 8px;
 }
