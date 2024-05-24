@@ -1,0 +1,56 @@
+.container{
+    margin: 1rem;
+}
+
+.topmain{
+    font-size: 40px;
+    font-weight: 700;
+    width: 162px;
+    height: 56px;
+    color: #7135BF;
+}
+
+.containerTop{
+width:390.38px;
+height: 430px;
+background-color: #DFC6FF;
+}
+
+.Top1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px;
+}
+
+.right,.sideA{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+
+}
+
+.Top2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.texe{
+    width: 159px;
+    height: 26px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.texe1{
+    width:190px;
+    height: 26px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}

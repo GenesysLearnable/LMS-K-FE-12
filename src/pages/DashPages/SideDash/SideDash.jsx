@@ -40,7 +40,7 @@ const SideDash = () => {
                   </div>
                   <p style={{fontFamily: 'Actor'}}>Start the basics of English by learning the 9 parts of speech </p>
 
-                  <Button className={styles.hero_btn} content="Get Started" link="/Subjects" />               
+                  <Button className={styles.hero_btn} content="Get Started" link="/dashboard/subjects" />               
                 </div>
 
                 <div className={styles['dashboard-hero-img']}>
@@ -95,7 +95,7 @@ const SideDash = () => {
               <section className={styles.main_left_section}>
                     <div className={styles.subject}>
                       <p className={styles.subject_title}>Subjects</p>
-                      <Link>
+                      <Link to="/dashboard/subjects">
                         <p className={styles.view_more}>View more <img src={heroarrowright} alt="View More" /></p>
                       </Link>
                     </div>
@@ -119,7 +119,7 @@ const SideDash = () => {
 
                     <div className={styles.challenge}>
                       <p className={styles.subject_title}>Challenges</p>
-                      <Link>
+                      <Link to="/dashboard/subjects">
                         <p className={styles.view_more}>View more <img src={heroarrowright} alt="View More" /></p>
                       </Link>
                     </div>

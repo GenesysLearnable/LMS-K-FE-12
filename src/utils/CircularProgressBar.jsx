@@ -8,7 +8,7 @@ export default function CircularProgressBar({value, color}) {
         value={value}
         text={`${value}%`}
         styles={buildStyles({
-          textSize: '16px',
+          textSize: '20px',
           pathColor: color,
           textColor: color,
           trailColor: '#d6d6d6',
