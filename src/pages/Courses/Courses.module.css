@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header {
+  padding: 57px 0 0 80px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.gobackarrow {
+  width: 30.09px;
+  height: 30.4px;
+}
+
+.left-header-text {
+  font-family: "Comic Sans MS";
+  font-size: 50px;
+  font-weight: 400;
+}
+.course-section {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-gap: 10px;
+}
+.course_img {
+  width: 1200px;
+}
+.englishbutton {
+  font-family: "Comic Sans MS";
+  background-color: #f9742a;
+  width: 608px;
+  height: 85px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 12px;
+  box-shadow: 2px 3px 5px 0px #5d5d6a;
+  border: none;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.englishbutton:hover {
+  cursor: pointer;
+}
