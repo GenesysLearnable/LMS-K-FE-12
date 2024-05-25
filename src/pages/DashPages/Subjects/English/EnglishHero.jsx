@@ -36,7 +36,9 @@ export default function EnglishHero() {
                             <img src={module1} alt="Learn English" />
                             <p className={styles['module-text']}>Module 1- Introduction to Parts of Speech</p>
                         </div>
+                        <Link to="/courses">
                         <button className={styles['module-btn']}>Start</button>
+                        </Link>
                     </div>
                     <div className={styles['module-items']}>
                         <div className={styles['module-hero']}>
@@ -103,12 +105,12 @@ export default function EnglishHero() {
                 <div className={styles['reward-card']}>
                     <img src={ben10} alt="Ben 10" />
                     <p className={styles['movie-title']}>Ben 10 - Ep1</p>
-                    <p className={styles['movie-key']}>Unlock with: 5 Diamonds💎</p>
+                    <button className={styles['movie-key']}>Unlock with: 5 Diamonds💎</button>
                 </div>
                 <div className={styles['reward-card']}>
                     <img src={ben11} alt="Ben 10" />
                     <p className={styles['movie-title']}>Alien Force</p>
-                    <p className={styles['movie-key']}>Unlock with: 5 Diamonds💎</p>
+                    <button className={styles['movie-key']}>Unlock with: 5 Diamonds💎</button>
                 </div>
             </div>
         </section>
