@@ -144,6 +144,8 @@ const SideDash = () => {
                       <CircularProgressBar
                         value={100}
                         color="rgba(86, 195, 60, 1)"
+                        valueColor="rgba(0, 0, 0, 1)"
+                        fontFamily="Comic Sans MS"
                       />
                       <div className={styles.main_progress_content}>
                         <p className={styles.progress_title}>English Hero</p>
@@ -154,6 +156,8 @@ const SideDash = () => {
                       <CircularProgressBar
                         value={65}
                         color="rgba(151, 71, 255, 1)"
+                        valueColor="rgba(0, 0, 0, 1)"
+                        fontFamily="Comic Sans MS"
                       />
                       <p className={styles.progress_title}>Rhymes</p>
                   </div>
@@ -161,6 +165,8 @@ const SideDash = () => {
                       <CircularProgressBar
                         value={50}
                         color="rgba(196, 126, 9, 1)"
+                        valueColor="rgba(0, 0, 0, 1)"
+                        fontFamily="Comic Sans MS"
                       />
                       <div className={styles.main_progress_content}>
                         <p className={styles.progress_title}>Maths Mania</p>
@@ -171,6 +177,8 @@ const SideDash = () => {
                       <CircularProgressBar
                         value={30}
                         color="rgba(255, 0, 0, 1)"
+                        valueColor="rgba(0, 0, 0, 1)"
+                        fontFamily="Comic Sans MS"
                       />
                       <div className={styles.main_progress_content}>
                         <p className={styles.progress_title}>Challenges</p>
@@ -180,7 +188,9 @@ const SideDash = () => {
                   <div className={styles.main_progress}>
                       <CircularProgressBar
                         value={0}
-                        color="#d6d6d6"
+                        color="rgba(217, 217, 217, 1)"
+                        valueColor="rgba(0, 0, 0, 1)"
+                        fontFamily="Comic Sans MS"
                       />
                       <div className={styles.main_progress_content}>
                         <p className={styles.progress_title}>Upgrade to level 3</p>
