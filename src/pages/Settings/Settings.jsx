@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../../pages/Settings/Settings.module.css'
 import SettingClick from '../../components/settingClick/SettingClick'
 
