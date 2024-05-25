@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import About from "./pages/About/About";
 import { useGlobalContext } from "./context/appContext";
 import NotificationSettings from "./pages/NotificationSettings/NotificationSettings";
+import GamesII from "./pages/DashPages/Games/GamesII";
 
 const App = () => {
   const location = useLocation();
@@ -26,7 +27,8 @@ const App = () => {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/dashboard/*" element={<Dashboard />} />
       <Route path="/about" element={<About />} />
-      <Route path="/NotificationSettings" element={<NotificationSettings/>} />
+      <Route path="/NotificationSettings" element={<NotificationSettings />} />
+      <Route path="gamesII" element={<GamesII />} />
     </Routes>
   );
 };
