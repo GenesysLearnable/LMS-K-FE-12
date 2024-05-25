@@ -74,7 +74,7 @@ const Subjects = () => {
 
         <div className="course--container">
           <div>
-            <h2 className="course--title">Maths Mania</h2>
+            <h2 className="course--title">Super Basic Science</h2>
             <div className="course-card--container">
               {BasicScience.map((items, index) => {
                 const { id, subjectTitle, subjectDescription, imgURL, rating } =
