@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import { useGlobalContext } from "./context/appContext";
 import NotificationSettings from "./pages/NotificationSettings/NotificationSettings";
 import GamesII from "./pages/DashPages/Games/GamesII";
+import EnglishHero from "./pages/DashPages/Subjects/English/EnglishHero";
 
 const App = () => {
   const location = useLocation();
@@ -29,6 +30,7 @@ const App = () => {
       <Route path="/about" element={<About />} />
       <Route path="/NotificationSettings" element={<NotificationSettings />} />
       <Route path="gamesII" element={<GamesII />} />
+      <Route path="englishhero" element={<EnglishHero />} />
     </Routes>
   );
 };
