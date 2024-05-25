@@ -1,5 +1,6 @@
 import "./Subjects.css";
 import { English, Math, BasicScience, General } from "../../../utils/Subjects";
+import { Link } from "react-router-dom";
 
 const Subjects = () => {
   return (
@@ -26,7 +27,9 @@ const Subjects = () => {
                       <img className="course--banner" src={imgURL} alt="" />
                       <div className="course--item">
                         <p>{subjectTitle}</p>
-                        <button>Start</button>
+                        <Link to='/englishhero'>
+                          <button>Start</button>
+                        </Link>
                       </div>
                       <div className="course--description">
                         <p>{subjectDescription}</p>
