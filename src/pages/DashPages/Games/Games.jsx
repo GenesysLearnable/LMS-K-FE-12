@@ -13,13 +13,13 @@ export default function Game() {
         <div className={styles.textsection}>
           <h1 className={styles.purple}>Welcome to</h1>
           <h1 className={styles.orange}>Game Center</h1>
-          <p className={styles.text}>You have 25 Diamond(s)</p>
+          <p className={styles.text}>You have 0 Diamond(s)</p>
           <p className={styles.text}>Unlock more coins to access</p>
           <p>these amazing games</p>
 
           <Link to="/gamesII">
             <button className={styles.gameButton}>
-              <span>Play a Game </span>
+              <span>Take a course </span>
               <span>
                 <svg
                   width="25"
