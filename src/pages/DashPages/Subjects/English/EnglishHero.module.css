@@ -82,6 +82,10 @@
     justify-content: center;
 }
 
+.module-btn:hover {
+    cursor: pointer;
+}
+
 .view-more-cont {
     display: flex;
     justify-content: flex-end;
