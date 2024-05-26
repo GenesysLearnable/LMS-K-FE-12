@@ -1,9 +1,17 @@
 import styles from "./Courses.module.css";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import arrowleft from "../../assets/arrow-left.svg";
 import courses from "../../assets/courses.png";
+import Popup from "./PopUp/PopUp";
 
 const Courses = () => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const togglePopup = () => {
+      setIsOpen(!isOpen);
+    };
+
   return (
     <>
       <div className={styles.container}>
@@ -25,9 +33,10 @@ const Courses = () => {
             alt="course content"
             className={styles.course_img}
           />
-          <Link to="/englishhero">
-            <button className={styles.englishbutton}>Done</button>
-          </Link>
+          <button className={styles.englishbutton} onClick={togglePopup}>
+            Done
+          </button>
+          {isOpen && <Popup handleClose={togglePopup} />}
         </section>
       </div>
     </>
