@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import axios from "../../api/axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Rings } from "react-loader-spinner";
 
 const SignUp = () => {
   const [userData, setUserData] = useState({
@@ -18,7 +19,7 @@ const SignUp = () => {
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
-  // const notify = () => toast("Account already exists");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const anyEmptyField = Object.values(userData).some((field) => field === "");
@@ -48,6 +49,7 @@ const SignUp = () => {
     } else {
       setErrorMessage("");
       try {
+        setIsLoading(true);
         const response = await fetch(
           "https://lms-k-be-12.onrender.com/api/user/signup",
           {
@@ -69,9 +71,11 @@ const SignUp = () => {
         } else {
           toast.error(data.message + " Sign in instead");
         }
+        setIsLoading(false);
         console.log(response);
       } catch (error) {
         console.log(error);
+        setIsLoading(false);
       }
     }
   };
@@ -80,7 +84,7 @@ const SignUp = () => {
     <>
       <ToastContainer
         position="top-right"
-        autoClose={4000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -88,8 +92,20 @@ const SignUp = () => {
         pauseOnFocusLoss={false}
         pauseOnHover={false}
         theme="light"
-        transition:Slide
       />
+      {isLoading && (
+        <div className="overlay">
+          <Rings
+            height={80}
+            width={80}
+            color="#4fa94d"
+            visible={true}
+            secondaryColor="#4fa94d"
+            strokeWidth={3}
+            strokeWidthSecondary={2}
+          />
+        </div>
+      )}
       <section className="signup">
         <div className="left">
           <Link to="/">
