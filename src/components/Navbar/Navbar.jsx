@@ -80,7 +80,7 @@ export default function Navbar() {
                 isLoggedIn === true ? "nav--button-display" : ""
               }`}
             >
-              Sign Up
+              Get Started
             </button>
           </Link>
 

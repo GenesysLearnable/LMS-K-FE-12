@@ -11,12 +11,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useGlobalContext } from "../../context/appContext";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
+import { Rings } from "react-loader-spinner";
 
 const SignIn = () => {
   const { isLoggedIn, setIsLoggedIn } = useGlobalContext();
   const { forgotPassActive, setForgotPassActive } = useGlobalContext();
   const { currentScreen, setCurrentScreen } = useGlobalContext();
   const [isDisabled, setIsDisabled] = useState(true);
+  const [loadSignIn, setLoadSignIn] = useState(false);
   const [signInData, setSignInData] = useState({
     email: "",
     password: "",
@@ -49,6 +51,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
+      setLoadSignIn(true);
       const response = await fetch(
         "https://lms-k-be-12.onrender.com/api/user/signin",
         {
@@ -73,8 +76,10 @@ const SignIn = () => {
       } else {
         toast.error(data.message);
       }
+      setLoadSignIn(false);
     } catch (error) {
       console.log(error);
+      setLoadSignIn(false);
     }
   };
 
@@ -82,7 +87,7 @@ const SignIn = () => {
     <>
       <ToastContainer
         position="top-right"
-        autoClose={4000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -92,6 +97,19 @@ const SignIn = () => {
         theme="light"
         transition:Slide
       />
+      {loadSignIn && (
+        <div className="overlay">
+          <Rings
+            height={80}
+            width={80}
+            color="#4fa94d"
+            visible={true}
+            secondaryColor="#4fa94d"
+            strokeWidth={3}
+            strokeWidthSecondary={2}
+          />
+        </div>
+      )}
       <section className="signin">
         <div className="left">
           <img className="signin-bg" src={SigninBg} alt="" />

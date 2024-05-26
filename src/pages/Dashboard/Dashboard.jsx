@@ -10,14 +10,13 @@ import Settings from "../DashPages/Settings/Settings.jsx";
 import Subjects from "../DashPages/Subjects/Subjects";
 import "./Dashboard.css";
 
-
 const Dashboard = () => {
   return (
     <>
       <Navbar />
       <div className="dash--main">
         <Sidebar />
-        <div className="ml-64 p-6 flex-1">
+        <div className="ml-64 p-6 flex-1 test-main">
           <Routes>
             <Route path="/" element={<SideDash />} />
             <Route path="assessments" element={<Assessments />} />
@@ -26,7 +25,6 @@ const Dashboard = () => {
             <Route path="rewards" element={<Rewards />} />
             <Route path="settings" element={<Settings />} />
             <Route path="subjects" element={<Subjects />} />
-           
           </Routes>
         </div>
       </div>

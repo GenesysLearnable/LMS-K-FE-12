@@ -1,0 +1,68 @@
+.edit-password--container {
+  padding: 1rem;
+}
+
+.edit--actions {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.edit-text {
+  color: #7939cc;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.cancel-edit {
+  color: #cc5512;
+  font-size: 1.5rem;
+}
+
+.edit-header--container {
+  margin-top: 3rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.edit--header {
+  font-size: 3rem;
+  color: #7939cc;
+  font-weight: 600;
+}
+
+.edit--profile {
+  position: relative;
+}
+
+.edit-user--image {
+  border-radius: 100%;
+  height: 8rem;
+  width: 8rem;
+  margin-top: 1rem;
+  border: 5px solid #e8e8e8;
+}
+
+.edit--icon {
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 5rem;
+}
+
+.edit-cta--buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
