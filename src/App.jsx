@@ -9,7 +9,7 @@ import { useGlobalContext } from "./context/appContext";
 import NotificationSettings from "./pages/NotificationSettings/NotificationSettings";
 import GamesII from "./pages/DashPages/Games/GamesII";
 import EnglishHero from "./pages/DashPages/Subjects/English/EnglishHero";
-import Courses from "./pages/Courses/Courses"
+import Courses from "./pages/Courses/Courses";
 
 const App = () => {
   const location = useLocation();
