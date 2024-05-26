@@ -35,8 +35,10 @@
     color: rgba(244, 175, 136, 1);
 }
 
-.active{
-    color: rgba(230, 95, 20, 1);
+.navlistitem.active > a{
+    color: rgba(230, 95, 20, 1) !important;
+    font-size: "Comic Sans MS";
+    font-weight: 700;
 }
 
 /* ------------ Mission Section------------- */
