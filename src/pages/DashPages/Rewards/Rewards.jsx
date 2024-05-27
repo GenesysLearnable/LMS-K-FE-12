@@ -1,8 +1,8 @@
 import styles from "./Rewards.module.css";
 import classNames from "classnames";
-import tictac from "../../../assets/titac.png";
-import ben from "../../../assets/ben.png";
-import ben10 from "../../../assets/ben10.png";
+import Tictac from "../../../assets/tictac.png";
+import Ben from "../../../assets/ben.png";
+import Ben10 from "../../../assets/ben10.png";
 
 const Rewards = () => {
   return (
@@ -33,18 +33,18 @@ const Rewards = () => {
 
       <div className={styles.cardrow}>
         <div className={styles.ticcard}>
-          <img src={tictac} alt="tictac" />
+          <img src={Tictac} alt="tictac" />
           <p>Tic-tac-toe</p>
           <p> Unlock with: 5 Diamonds &#128142</p>
         </div>
 
         <div className={styles.bencard}>
-          <img src={ben} alt="ben 10" />
+          <img src={Ben} alt="ben 10" />
           <p>Ben 10 Ep. 1</p>
           <p> Unlockk with : 5 Diamonds &#128142</p>
         </div>
         <div className={styles.bentencard}>
-          <img src={ben10} alt="ben-image" />
+          <img src={Ben10} alt="ben-image" />
           <p>Ben 10 Ep. 2</p>
           <p>Unlock with: 5 Diamonds &#128142</p>
         </div>

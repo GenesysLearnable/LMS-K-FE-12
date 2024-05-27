@@ -12,7 +12,8 @@
 
 .sidebar--container {
   background: #dfc6ff;
-  width: 15rem;
+  width: 20rem;
+  padding-top: 4rem;
   min-height: 100vh;
   border-radius: 0 2rem 2rem 0;
   box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);

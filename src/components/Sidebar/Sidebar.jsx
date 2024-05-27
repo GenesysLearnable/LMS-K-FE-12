@@ -23,12 +23,12 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar--container">
-      <div className="dash--avatar">
+      {/* <div className="dash--avatar">
         <div className="dash--image-container">
           <img src={DashAvatar} alt="User Avatar" />
         </div>
         <p className="dash--user-name">Chujac Kingsley</p>
-      </div>
+      </div> */}
 
       <ul className="dash--link-container">
         <Link to="/dashboard">

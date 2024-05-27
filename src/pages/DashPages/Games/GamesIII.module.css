@@ -21,30 +21,30 @@ body {
 .purple {
   color: #7939cc;
 }
-.first-row {
+.first_row {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
 }
-.second-row {
+.second_row {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
 }
-.second-section {
+.second_section {
   background-color: #dfc6ff;
   margin: 0px auto;
   width: fit-content;
   padding: 10px;
   border-radius: 25px;
 }
-.btn-2 {
+.btn_2 {
   background-color: #dfc6ff;
   outline: none;
   border: none;
   font-family: "Comic Sans MS";
 }
-.btn-1 {
+.btn_1 {
   background-color: #442073;
   border: none;
   outline: none;
@@ -70,7 +70,7 @@ body {
   width: 80px;
   color: white;
 }
-.last-text {
+.last_text {
   text-align: center;
   display: flex;
   justify-content: center;
