@@ -1,4 +1,10 @@
 import styles from "./GamesIII.module.css";
+import Tictac from "../../../assets/tictac.png";
+import Snake from "../../../assets/snake.png";
+import Rivercross from "../../../assets/rivercross.png";
+import Bubble from "../../../assets/bubble.png";
+import Hangman from "../../../assets/hangman.png";
+import Candy from "../../../assets/candy.png";
 
 export default function GamesIII() {
   return (
@@ -19,21 +25,21 @@ export default function GamesIII() {
       <div className={styles.cards}>
         <div className={styles.first_row}>
           <div className={styles.first_card}>
-            <img src="images/tictac.png" />
+            <img src={Tictac} alt="tictac" />
             <h4>Tic-tac-toe</h4>
             <p>Unlock with 5 Diamonds</p>
             <button className={styles.Playbutton1}>Play</button>
           </div>
 
           <div className={styles.second_card}>
-            <img src="images/snake.png" />
+            <img src={Snake} alt="snake" />
             <h4>Snake</h4>
             <p>Unlock with 10 Diamonds</p>
             <button className={styles.Playbutton1}>Play</button>
           </div>
 
           <div className={styles.third_card}>
-            <img src="images/rivercross.png" />
+            <img src={Rivercross} alt="rivercross" />
             <h4>River cross</h4>
             <p>Unlock with 15 Diamonds</p>
             <button className={styles.Playbutton}>Play</button>
@@ -42,21 +48,21 @@ export default function GamesIII() {
 
         <div className={styles.second_row}>
           <div className={styles.card_one}>
-            <img src="images/bubble.png" />
+            <img src={Bubble} alt="bubble" />
             <h4>Bubbles</h4>
             <p>Unlock with 20 Diamonds</p>
             <button className={styles.Playbutton}>Play</button>
           </div>
 
           <div className={styles.card_two}>
-            <img src="images/hangman.png" />
+            <img src={Hangman} alt="hangman" />
             <h4>Hangman</h4>
             <p>Unlock with 30 Diamonds</p>
             <button className={styles.Playbutton}>Play</button>
           </div>
 
           <div className={styles.card_three}>
-            <img src="images/candy.png" />
+            <img src={Candy} alt="candy" />
             <h4>Candy</h4>
             <p>Unlock with 40 Diamonds</p>
             <button className={styles.Playbutton}>Play</button>
