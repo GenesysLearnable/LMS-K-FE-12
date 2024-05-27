@@ -50,7 +50,7 @@ const UserProfile = () => {
             />
           </div>
 
-          <div>
+          <div className="edit-form-btn--container">
             <Link to="">
               <button className="edit-form--button">Save Changes</button>
             </Link>
