@@ -16,20 +16,20 @@ const Settings = () => {
         <div className={stylesB.topmain}>Settings</div>
 
         <div className={stylesB.containerTop}>
-          <div className={stylesB.Top1}>
-            <div className={stylesB.right}>
-              <div className={stylesB.sideA}>
-                <img src={userpng} />
-                <div className={stylesB.texe}>Edit Profile</div>
+          <Link to="/dashboard/profile">
+            <div className={stylesB.Top1}>
+              <div className={stylesB.right}>
+                <div className={stylesB.sideA}>
+                  <img src={userpng} />
+                  <div className={stylesB.texe}>Edit Profile</div>
+                </div>
+              </div>
+
+              <div className={stylesB.left}>
+                <img src={arrowLeft} />
               </div>
             </div>
-
-            <div className={stylesB.left}>
-              <Link to="/editProfile">
-                <img src={arrowLeft} />
-              </Link>
-            </div>
-          </div>
+          </Link>
 
           <div className={stylesB.Top2}>
             <div className={stylesB.right}>

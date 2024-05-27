@@ -125,8 +125,7 @@
 }
 
 .edit-form--button {
-  width: 70%;
-  margin: 0 auto;
+  width: 50rem;
   border-radius: 0.625rem;
   background-color: rgba(204, 85, 18, 1);
   border: none;
@@ -141,4 +140,6 @@
 .edit-form-btn--container {
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
