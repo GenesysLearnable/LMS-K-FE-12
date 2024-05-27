@@ -3,6 +3,8 @@ import classNames from "classnames";
 import Tictac from "../../../assets/tictac.png";
 import Ben from "../../../assets/ben.png";
 import Ben10 from "../../../assets/ben10.png";
+// import Whitestars from "../../../assets/whitestars.png";
+// import Onestar from "../../../assets/onestar.png";
 
 const Rewards = () => {
   return (
@@ -23,7 +25,7 @@ const Rewards = () => {
           </div>
         </div>
         <div className={`${styles.stars} ${styles.white}`}>
-          <p className={styles.space_top}>You Won 25 diamonds </p>
+          <p className={styles.space_top}>You Won 25 diamonds</p>
           <p className={styles.space_top}>You ranked #2 on the Leaderboard </p>
           <p className={styles.space_top}>You Won 5 diamonds </p>
         </div>
