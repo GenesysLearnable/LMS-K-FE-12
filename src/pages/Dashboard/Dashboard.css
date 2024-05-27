@@ -1,4 +1,8 @@
 .dash--main {
-  margin-top: 7.4rem;
+  margin-top: 6.5rem;
   display: flex;
+}
+
+.test-main {
+  width: 100%;
 }

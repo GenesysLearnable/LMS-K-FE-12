@@ -16,13 +16,13 @@ export default function AboutNav({ activeSection,  setActiveSection }) {
   return (
         <nav className={styles.container}>
             <ul className={styles.navlist}>
-                <li className={`${styles.navlistitem} ${activeSection === 'mission' ? "active" : ''}`}>
+                <li className={`${styles.navlistitem} ${activeSection === 'mission' ? styles.active : ''}`}>
                   <a href="/" onClick={(event) => handleLinkClick(event, 'mission')}>Mission</a>
                 </li>
-                <li className={`${styles.navlistitem} ${activeSection === 'approach' ? "active" : ''}`}>
+                <li className={`${styles.navlistitem} ${activeSection === 'approach' ? styles.active : ''}`}>
                   <a href="/approach" onClick={(event) => handleLinkClick(event, 'approach')}>Approach</a>
                 </li>
-                <li className={`${styles.navlistitem} ${activeSection === 'aboutcontact' ? "active" : ''}`}>
+                <li className={`${styles.navlistitem} ${activeSection === 'aboutcontact' ? styles.active : ''}`}>
                   <a href="/aboutcontact" onClick={(event) => handleLinkClick(event, 'aboutcontact')}>Contact Us</a>
                 </li>
             </ul>

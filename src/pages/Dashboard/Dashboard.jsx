@@ -6,7 +6,7 @@ import Assessments from "../DashPages/Assessments/Assessments";
 import Games from "../DashPages/Games/Games";
 import UserProfile from "../DashPages/Profile/Profile";
 import Rewards from "../DashPages/Rewards/Rewards";
-import Settings from "../Settings/Settings";
+import Settings from "../DashPages/Settings/Settings.jsx";
 import Subjects from "../DashPages/Subjects/Subjects";
 import "./Dashboard.css";
 
@@ -16,7 +16,7 @@ const Dashboard = () => {
       <Navbar />
       <div className="dash--main">
         <Sidebar />
-        <div className="ml-64 p-6 flex-1">
+        <div className="ml-64 p-6 flex-1 test-main">
           <Routes>
             <Route path="/" element={<SideDash />} />
             <Route path="assessments" element={<Assessments />} />

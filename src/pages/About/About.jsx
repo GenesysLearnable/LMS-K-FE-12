@@ -29,7 +29,7 @@ const About = () => {
         <div>
         <Navbar />
         <h2 className={styles.title}>About us!</h2>
-        <AboutNav setActiveSection={setActiveSection} />
+        <AboutNav activeSection={activeSection} setActiveSection={setActiveSection} />
         <div className={styles.content}>
           {renderContent()}
         </div>
