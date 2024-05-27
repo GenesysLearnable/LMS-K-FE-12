@@ -17,7 +17,7 @@ export default function Game() {
           <p className={styles.text}>Unlock more coins to access</p>
           <p>these amazing games</p>
 
-          <Link to="/gdashboard/subjects">
+          <Link to="/dashboard/subjects">
             <button className={styles.gameButton}>
               <span>Take a course </span>
               <span>
