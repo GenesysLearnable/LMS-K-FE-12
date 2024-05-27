@@ -17,7 +17,7 @@ export default function Navbar() {
   useEffect(() => {
     const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
     if (storedIsLoggedIn) {
-      setIsLoggedIn(storedIsLoggedIn === "true"); // Convert the string to a boolean
+      setIsLoggedIn(storedIsLoggedIn === "true");
     } else {
       setIsLoggedIn(storedIsLoggedIn === "false");
     }
@@ -43,16 +43,18 @@ export default function Navbar() {
                 Home
               </li>
             </Link>
-            {/* <Link to="/dashboard">
-              <li
-                className={`nav-list-item ${
-                  activeNavItem === "dashboard" ? "nav-active" : ""
-                }`}
-                onClick={() => toggleActiveLink("dashboard")}
-              >
-                Dashboard
-              </li>
-            </Link> */}
+            {isLoggedIn && (
+              <Link to="/dashboard">
+                <li
+                  className={`nav-list-item ${
+                    activeNavItem === "dashboard" ? "nav-active" : ""
+                  }`}
+                  onClick={() => toggleActiveLink("dashboard")}
+                >
+                  Dashboard
+                </li>
+              </Link>
+            )}
             <Link to="/about">
               <li
                 className={`nav-list-item ${
