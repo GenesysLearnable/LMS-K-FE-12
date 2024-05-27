@@ -1,6 +1,7 @@
 import "./Profile.css";
 import EditIcon from "../../../assets/edit.svg";
 import EditImage from "../../../assets/dash_Avatar.png";
+import { Link } from "react-router-dom";
 
 const UserProfile = () => {
   return (
@@ -25,6 +26,62 @@ const UserProfile = () => {
           </div>
         </div>
       </section>
+
+      <section>
+        <form action="">
+          <div className="edit-form--row">
+            <EditForm label="First Name" type="text" placeholder="Chujac" />
+            <EditForm label="Last Name" type="text" placeholder="Kingsley" />
+          </div>
+          <div className="edit-form--row">
+            <EditForm
+              label="Date of Birth"
+              type="date"
+              placeholder="7th March, 2020"
+            />
+            <RadioForm label="Gender" />
+          </div>
+          <div className="edit-form--row">
+            <EditForm label="Grade" type="text" placeholder="Nursery" />
+            <EditForm
+              label="Lcation"
+              type="text"
+              placeholder="Lagos, Nigeria"
+            />
+          </div>
+
+          <div className="edit-form-btn--container">
+            <Link to="">
+              <button className="edit-form--button">Save Changes</button>
+            </Link>
+          </div>
+        </form>
+      </section>
+    </>
+  );
+};
+
+const EditForm = ({ label, type, placeholder }) => {
+  return (
+    <>
+      <div className="edit-form--container">
+        <label htmlFor="">{label}</label>
+        <input type={type} placeholder={placeholder} />
+      </div>
+    </>
+  );
+};
+
+const RadioForm = ({ label }) => {
+  return (
+    <>
+      <div className="edit-form--container">
+        <label htmlFor="">{label}</label>
+        <select>
+          <option value="male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
     </>
   );
 };
