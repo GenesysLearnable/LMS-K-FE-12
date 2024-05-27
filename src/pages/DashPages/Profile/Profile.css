@@ -1,5 +1,6 @@
 .edit-password--container {
   padding: 1rem;
+  width: calc(100vw - 16rem);
 }
 
 .edit--actions {
